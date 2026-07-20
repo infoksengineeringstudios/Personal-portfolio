@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ContentItem } from "@/lib/types";
+import { getExperiencePeriod } from "@/lib/utils";
 import { FadeIn } from "./FadeIn";
 
 interface ExperienceListProps {
@@ -28,7 +29,9 @@ export function ExperienceList({ items, basePath }: ExperienceListProps) {
                   {item.summary}
                 </p>
               </div>
-              <span className="shrink-0 text-sm text-subtle">{item.year}</span>
+              <span className="shrink-0 text-sm text-subtle">
+                {getExperiencePeriod(item)}
+              </span>
             </Link>
           </FadeIn>
         </li>

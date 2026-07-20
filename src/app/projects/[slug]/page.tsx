@@ -8,6 +8,7 @@ import { MarkdownBody } from "@/components/MarkdownBody";
 import { ReportDownloads } from "@/components/ReportDownloads";
 import { TechStack } from "@/components/TechStack";
 import { getAllProjects, getItemBySlug } from "@/lib/content";
+import { getExperiencePeriod } from "@/lib/utils";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -51,7 +52,9 @@ export default async function ProjectPage({ params }: PageProps) {
 
         <header className="max-w-3xl">
           <div className="flex flex-wrap items-center gap-3 text-sm text-subtle">
-            {project.year ? <span>{project.year}</span> : null}
+            {getExperiencePeriod(project) ? (
+              <span>{getExperiencePeriod(project)}</span>
+            ) : null}
             {project.featured ? (
               <>
                 <span aria-hidden="true">·</span>

@@ -4,6 +4,7 @@ summary: Supported engineers on site inspections of infrastructure and building 
 organization: Ministry of National Infrastructure
 role: Engineering Intern
 year: "2024–2025"
+period: "Dec 2024 – Jan 2025"
 featured: true
 technologies:
   - Site inspections
@@ -15,7 +16,7 @@ technologies:
 
 ## Overview
 
-Engineering Intern at the Ministry of National Infrastructure (Dec 2024 – Feb 2025).
+Engineering Intern at the Ministry of National Infrastructure (Dec 2024 – Jan 2025).
 
 Supported engineers during site inspections of infrastructure and building projects, including retaining walls and foundation works, ensuring compliance with engineering specifications and safety requirements.
 

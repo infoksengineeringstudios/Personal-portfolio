@@ -3,6 +3,7 @@ title: Monash Mauritian Society
 summary: Founded and led a student society promoting Mauritian culture, securing sponsorship and delivering cultural and social events across campus.
 organization: Monash Mauritian Society
 role: Founder & President
+period: Nov 2024 – Present
 featured: true
 technologies:
   - Leadership

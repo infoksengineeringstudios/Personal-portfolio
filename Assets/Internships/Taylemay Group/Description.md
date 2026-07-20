@@ -4,6 +4,7 @@ summary: Site Engineer Intern on a large-scale 1,000-unit affordable housing dev
 organization: Taylemay Group
 role: Site Engineer Intern
 year: "2023–2024"
+period: "Nov 2023 – Feb 2024"
 featured: true
 cover: casting of foundation.jpg
 technologies:

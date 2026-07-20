@@ -3,6 +3,7 @@ title: ACES
 summary: Events and Academic Committee contributions supporting student engagement, industry connections, and academic success for civil engineering students.
 organization: Monash Association of Civil Engineering Students
 role: Events & Academic Committees
+period: Apr 2024 – Present
 featured: true
 technologies:
   - Event coordination

@@ -3,6 +3,7 @@ title: Student Leadership & Ambassador
 summary: Represented Monash University and the Faculty of Engineering across recruitment, outreach, orientation, and peer mentoring — including mentoring 17 first-year students.
 organization: Monash University
 role: Campus & International Student Ambassador · Peer Mentor
+period: May 2024 – Present
 featured: true
 cover: Peer Mentoring Certificate.jpg
 technologies:

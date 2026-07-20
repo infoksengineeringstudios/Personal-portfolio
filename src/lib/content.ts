@@ -190,6 +190,12 @@ function loadItem(kind: ContentKind, folderName: string): ContentItem {
     technologies: parseStringList(data.technologies),
     learnings: parseStringList(data.learnings),
     year: typeof data.year === "string" ? data.year : undefined,
+    period:
+      typeof data.period === "string" && data.period
+        ? data.period
+        : typeof data.year === "string" && data.year
+          ? data.year
+          : undefined,
     role: typeof data.role === "string" ? data.role : undefined,
     organization:
       typeof data.organization === "string" ? data.organization : undefined,

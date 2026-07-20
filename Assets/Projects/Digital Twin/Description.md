@@ -8,6 +8,7 @@ technologies:
   - Data Analysis
   - Fire Safety Engineering
 year: "2025"
+period: "Feb 2025 – Jun 2025"
 featured: true
 learnings:
   - Integrated multi-parameter environmental monitoring with building data.

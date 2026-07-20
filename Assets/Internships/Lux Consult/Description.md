@@ -4,6 +4,7 @@ summary: Engineering internship focused on design documentation, coordination, a
 organization: Lux Consult
 role: Engineering Intern
 year: "2025"
+period: "Dec 2025 – Jan 2026"
 featured: true
 cover: AquaSol.png
 technologies:

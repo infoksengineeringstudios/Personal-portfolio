@@ -6,6 +6,7 @@ technologies:
   - Navisworks
   - BIM 360
 year: "2024"
+period: "Mar 2024 – Nov 2024"
 featured: true
 learnings:
   - Built reusable families and view templates.

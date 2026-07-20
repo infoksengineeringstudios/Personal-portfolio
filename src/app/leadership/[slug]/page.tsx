@@ -9,6 +9,7 @@ import { ReportDownloads } from "@/components/ReportDownloads";
 import { TechStack } from "@/components/TechStack";
 import { getItemBySlug, getItems } from "@/lib/content";
 import type { ContentKind } from "@/lib/types";
+import { getExperiencePeriod } from "@/lib/utils";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -53,7 +54,7 @@ export default async function LeadershipDetailPage({ params }: PageProps) {
 
         <header className="max-w-3xl">
           <p className="text-sm text-subtle">
-            {[item.role, item.organization, item.year]
+            {[item.role, item.organization, getExperiencePeriod(item)]
               .filter(Boolean)
               .join(" · ")}
           </p>

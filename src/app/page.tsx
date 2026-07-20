@@ -9,6 +9,7 @@ import {
   getPageContent,
   getProfile,
 } from "@/lib/content";
+import { getExperiencePeriod } from "@/lib/utils";
 
 export default function HomePage() {
   const profile = getProfile();
@@ -81,7 +82,9 @@ export default function HomePage() {
                     </Link>
                     <p className="mt-1 text-sm text-muted">{item.role}</p>
                   </div>
-                  <span className="text-sm text-subtle">{item.year}</span>
+                  <span className="text-sm text-subtle">
+                    {getExperiencePeriod(item)}
+                  </span>
                 </li>
               </FadeIn>
             ))}
@@ -123,8 +126,8 @@ export default function HomePage() {
                       {item.summary}
                     </p>
                   </div>
-                  <span className="shrink-0 text-sm font-medium text-accent">
-                    View
+                  <span className="shrink-0 text-sm text-subtle">
+                    {getExperiencePeriod(item)}
                   </span>
                 </Link>
               </li>

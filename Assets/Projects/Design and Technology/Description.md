@@ -7,6 +7,7 @@ technologies:
   - Sustainable Design
   - Fabrication
 year: "2023"
+period: "Jan 2023 – Jun 2023"
 featured: true
 learnings:
   - Applied sustainable design principles to reclaimed timber.

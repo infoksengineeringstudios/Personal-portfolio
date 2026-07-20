@@ -7,6 +7,7 @@ technologies:
   - Microsoft Excel
   - Austroads Standards
 year: "2025"
+period: "Mar 2025 – Nov 2025"
 featured: true
 cover: Final Civil3d plan.png
 learnings:

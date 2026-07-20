@@ -15,6 +15,13 @@ export function cn(...classes: Array<string | false | null | undefined>): string
   return classes.filter(Boolean).join(" ");
 }
 
+export function getExperiencePeriod(item: {
+  period?: string;
+  year?: string;
+}): string | undefined {
+  return item.period ?? item.year;
+}
+
 export function getMimeType(filename: string): string {
   const ext = filename.split(".").pop()?.toLowerCase() ?? "";
   const map: Record<string, string> = {

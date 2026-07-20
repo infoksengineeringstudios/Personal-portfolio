@@ -8,6 +8,7 @@ technologies:
   - Woodworking
   - Workshop Safety
 year: "2025"
+period: "Feb 2025 – Aug 2025"
 featured: true
 cover: 20250505_123948 (1).jpg
 learnings:

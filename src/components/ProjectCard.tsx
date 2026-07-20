@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ContentItem } from "@/lib/types";
+import { getExperiencePeriod } from "@/lib/utils";
 import { FadeIn } from "./FadeIn";
 
 interface ProjectCardProps {
@@ -29,8 +30,10 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               <h3 className="text-lg font-semibold tracking-[-0.03em] text-foreground">
                 {project.title}
               </h3>
-              {project.year ? (
-                <span className="shrink-0 text-sm text-subtle">{project.year}</span>
+              {getExperiencePeriod(project) ? (
+                <span className="shrink-0 text-sm text-subtle">
+                  {getExperiencePeriod(project)}
+                </span>
               ) : null}
             </div>
             <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">

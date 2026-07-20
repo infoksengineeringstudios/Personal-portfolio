@@ -9,6 +9,7 @@ export interface ContentItem {
   technologies: string[];
   learnings: string[];
   year?: string;
+  period?: string;
   role?: string;
   organization?: string;
   featured: boolean;
