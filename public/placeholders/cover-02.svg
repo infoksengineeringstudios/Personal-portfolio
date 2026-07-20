@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Abstract structural grid cover">
+  <defs>
+    <linearGradient id="g" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0F3F7"/>
+      <stop offset="100%" stop-color="#D8E2EC"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <g stroke="#0B1220" stroke-opacity="0.1" stroke-width="1">
+    <path d="M0 200 H1600 M0 400 H1600 M0 600 H1600 M0 800 H1600"/>
+    <path d="M200 0 V1000 M400 0 V1000 M600 0 V1000 M800 0 V1000 M1000 0 V1000 M1200 0 V1000 M1400 0 V1000"/>
+  </g>
+  <rect x="480" y="280" width="640" height="400" fill="none" stroke="#0071E3" stroke-width="2" opacity="0.55"/>
+  <rect x="560" y="360" width="480" height="240" fill="#0071E3" opacity="0.08"/>
+</svg>

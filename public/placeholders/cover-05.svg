@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Abstract signal path cover">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#EEF2F7"/>
+      <stop offset="100%" stop-color="#D2DEEA"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <path d="M120 500 H480 L620 320 H980 L1120 680 H1480" fill="none" stroke="#0071E3" stroke-width="3" opacity="0.55"/>
+  <g fill="#0B1220" fill-opacity="0.35">
+    <circle cx="480" cy="500" r="7"/>
+    <circle cx="620" cy="320" r="7"/>
+    <circle cx="980" cy="320" r="7"/>
+    <circle cx="1120" cy="680" r="7"/>
+  </g>
+</svg>
