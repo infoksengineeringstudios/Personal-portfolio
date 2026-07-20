@@ -4,6 +4,7 @@ import { FadeIn } from "@/components/FadeIn";
 import { MarkdownBody } from "@/components/MarkdownBody";
 import { ReportDownloads } from "@/components/ReportDownloads";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ScaffoldingDrawing } from "@/components/TechDrawings";
 import { getPageContent, getProfile } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function AboutPage() {
           <div className="space-y-8">
             <MarkdownBody content={profile.body} />
             {page.body ? <MarkdownBody content={page.body} /> : null}
+            <ScaffoldingDrawing className="pointer-events-none mx-auto mt-4 w-full max-w-[240px] text-foreground opacity-60" />
           </div>
         </FadeIn>
 

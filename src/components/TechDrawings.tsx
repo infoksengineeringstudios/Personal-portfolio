@@ -557,6 +557,221 @@ export function ExcavatorDrawing({ className }: { className?: string }) {
   );
 }
 
+/** Articulated dump truck, side elevation — haulage. */
+export function DumpTruckDrawing({ className }: { className?: string }) {
+  const draw = useDraw();
+  const fade = useFade();
+
+  return (
+    <svg
+      viewBox="0 0 280 180"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      {/* Chassis */}
+      <motion.path
+        d="M30 128 H250"
+        stroke="currentColor"
+        strokeWidth="2"
+        {...draw(0, 0.8)}
+      />
+      {/* Wheels */}
+      <motion.path
+        d="M60 132 a16 16 0 1 0 0.01 0 M150 132 a16 16 0 1 0 0.01 0 M190 132 a16 16 0 1 0 0.01 0"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        {...draw(0.5, 1)}
+      />
+      {/* Cab */}
+      <motion.path
+        d="M30 128 V92 H62 L74 106 V128 M38 92 V78 H58 V92 M40 84 H54"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        {...draw(1.1, 0.9)}
+      />
+      {/* Tipping tray */}
+      <motion.path
+        d="M84 124 L96 74 L240 62 L250 124 Z M96 74 L84 60 L92 58 L102 72"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        {...draw(1.7, 1.1)}
+      />
+      {/* Load */}
+      <motion.path
+        d="M104 72 C130 58 160 70 186 60 C206 54 224 62 236 64"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeDasharray="4 3"
+        opacity="0.7"
+        {...draw(2.5, 0.7)}
+      />
+      {/* Ground */}
+      <motion.path
+        d="M14 158 H266"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeDasharray="8 6"
+        opacity="0.6"
+        {...draw(2.8, 0.5)}
+      />
+      <motion.text
+        x="16"
+        y="176"
+        fontFamily="var(--font-jetbrains), monospace"
+        fontSize="10"
+        letterSpacing="0.14em"
+        fill="currentColor"
+        opacity="0.8"
+        {...fade(3.1)}
+      >
+        ADT-01 — HAUL 22 t
+      </motion.text>
+    </svg>
+  );
+}
+
+/** Scaffold bay elevation with platform and guardrail. */
+export function ScaffoldingDrawing({ className }: { className?: string }) {
+  const draw = useDraw();
+  const fade = useFade();
+
+  return (
+    <svg
+      viewBox="0 0 220 300"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      {/* Standards */}
+      <motion.path
+        d="M45 270 V40 M110 270 V40 M175 270 V40"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        {...draw(0, 1.2)}
+      />
+      {/* Ledgers */}
+      <motion.path
+        d="M45 250 H175 M45 190 H175 M45 130 H175 M45 70 H175"
+        stroke="currentColor"
+        strokeWidth="1"
+        {...draw(0.7, 1.2)}
+      />
+      {/* Diagonal braces */}
+      <motion.path
+        d="M45 250 L110 190 M110 190 L175 130 M45 130 L110 70"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.8"
+        {...draw(1.5, 1)}
+      />
+      {/* Platform planks + guardrail */}
+      <motion.path
+        d="M40 126 H180 M40 122 H180 M45 70 H175 M45 96 H175"
+        stroke="currentColor"
+        strokeWidth="1"
+        {...draw(2.2, 0.8)}
+      />
+      {/* Base plates */}
+      <motion.path
+        d="M36 270 H54 M101 270 H119 M166 270 H184"
+        stroke="currentColor"
+        strokeWidth="2"
+        {...draw(2.7, 0.4)}
+      />
+      {/* Ground */}
+      <motion.path
+        d="M20 276 H200"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeDasharray="8 6"
+        opacity="0.6"
+        {...draw(2.9, 0.4)}
+      />
+      <motion.text
+        x="110"
+        y="296"
+        textAnchor="middle"
+        fontFamily="var(--font-jetbrains), monospace"
+        fontSize="10"
+        letterSpacing="0.12em"
+        fill="currentColor"
+        opacity="0.8"
+        {...fade(3.2)}
+      >
+        SCAFFOLD — DUTY CLASS 3
+      </motion.text>
+    </svg>
+  );
+}
+
+/** Column formwork section with props and ties. */
+export function FormworkDrawing({ className }: { className?: string }) {
+  const draw = useDraw();
+  const fade = useFade();
+
+  return (
+    <svg
+      viewBox="0 0 300 230"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      {/* Form faces */}
+      <motion.path
+        d="M120 40 V190 M132 40 V190 M168 40 V190 M180 40 V190"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        {...draw(0, 1.1)}
+      />
+      {/* Concrete hatch between faces */}
+      <motion.path
+        d="M136 60 L164 46 M136 90 L164 76 M136 120 L164 106 M136 150 L164 136 M136 180 L164 166"
+        stroke="currentColor"
+        strokeWidth="0.75"
+        opacity="0.6"
+        {...draw(0.8, 1)}
+      />
+      {/* Walers + tie rods */}
+      <motion.path
+        d="M108 70 H192 M108 130 H192 M104 70 a4 4 0 1 0 0.01 0 M196 66 a4 4 0 1 0 0.01 0 M104 130 a4 4 0 1 0 0.01 0 M196 126 a4 4 0 1 0 0.01 0"
+        stroke="currentColor"
+        strokeWidth="1"
+        {...draw(1.5, 0.9)}
+      />
+      {/* Props */}
+      <motion.path
+        d="M118 100 L48 190 M182 100 L252 190 M40 190 H70 M230 190 H262"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        {...draw(2.1, 0.9)}
+      />
+      {/* Kicker + ground */}
+      <motion.path
+        d="M110 190 H190 M20 196 H280"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeDasharray="8 6"
+        opacity="0.6"
+        {...draw(2.7, 0.6)}
+      />
+      <motion.text
+        x="150"
+        y="222"
+        textAnchor="middle"
+        fontFamily="var(--font-jetbrains), monospace"
+        fontSize="10"
+        letterSpacing="0.12em"
+        fill="currentColor"
+        opacity="0.8"
+        {...fade(3)}
+      >
+        COLUMN FORMWORK — 450 SQ
+      </motion.text>
+    </svg>
+  );
+}
+
 /** Steel I-section with hatching + dimensions — side ornament. */
 export function BeamSectionDrawing({ className }: { className?: string }) {
   const draw = useDraw();

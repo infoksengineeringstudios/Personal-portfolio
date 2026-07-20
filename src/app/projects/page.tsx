@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MarkdownBody } from "@/components/MarkdownBody";
-import { RoadSectionDrawing } from "@/components/TechDrawings";
+import {
+  FormworkDrawing,
+  RoadSectionDrawing,
+} from "@/components/TechDrawings";
 import { getAllProjects, getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -15,7 +18,8 @@ export default function ProjectsPage() {
   const projects = getAllProjects();
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
+    <div className="relative mx-auto w-full max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
+      <FormworkDrawing className="pointer-events-none absolute right-0 top-6 hidden h-[230px] w-[300px] text-foreground opacity-55 lg:block" />
       <SectionHeading
         eyebrow="Work"
         title={page.title}

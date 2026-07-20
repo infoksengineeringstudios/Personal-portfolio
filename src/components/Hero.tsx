@@ -2,7 +2,7 @@ import Link from "next/link";
 import { AnimatedName } from "./AnimatedName";
 import { AvatarImage } from "./AvatarImage";
 import { BlueprintDrawing } from "./BlueprintDrawing";
-import { ExcavatorDrawing } from "./TechDrawings";
+import { DumpTruckDrawing, ExcavatorDrawing } from "./TechDrawings";
 import { FadeIn } from "./FadeIn";
 
 interface HeroProps {
@@ -125,6 +125,7 @@ export function Hero({ name, title, tagline }: HeroProps) {
         <div className="flex items-end justify-center gap-4 lg:gap-10">
           <ExcavatorDrawing className="hidden w-52 shrink-0 text-foreground opacity-70 md:block" />
           <BlueprintDrawing className="w-full max-w-3xl text-foreground opacity-60" />
+          <DumpTruckDrawing className="hidden w-56 shrink-0 text-foreground opacity-70 lg:block" />
         </div>
       </FadeIn>
     </section>
