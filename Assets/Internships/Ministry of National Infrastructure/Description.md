@@ -1,27 +1,29 @@
 ---
 title: Ministry of National Infrastructure
-summary: Supported engineers on site inspections of infrastructure and building works, including retaining walls and foundations, with a focus on compliance, progress monitoring, and construction standards.
+summary: Site engineering internship supporting inspections, supervision, and compliance on public infrastructure projects.
 organization: Ministry of National Infrastructure
 role: Engineering Intern
-year: "2024–2025"
-period: "Dec 2024 – Jan 2025"
+period: Dec 2024 – Jan 2025
 featured: true
+cover: IMG-20260719-WA0012.jpg
 technologies:
   - Site inspections
   - Construction supervision
   - Drawing interpretation
   - Technical documentation
   - Safety compliance
+learnings:
+  - Applied drawing interpretation and compliance checks on live infrastructure sites.
+  - Supported coordination between engineers, contractors, and site teams.
+  - Built practical understanding of public infrastructure delivery.
 ---
 
 ## Overview
 
-Engineering Intern at the Ministry of National Infrastructure (Dec 2024 – Jan 2025).
-
-Supported engineers during site inspections of infrastructure and building projects, including retaining walls and foundation works, ensuring compliance with engineering specifications and safety requirements.
+Supported site engineers on infrastructure and building projects, including retaining walls, foundations, and large-scale housing developments.
 
 ## Key contributions
 
-- Assisted with construction supervision, progress monitoring, and communication between engineers and contractors on active project sites.
-- Developed practical experience interpreting engineering drawings, technical documentation, and construction standards.
-- Gained insight into public infrastructure project delivery across live sites.
+- Assisted with site inspections, progress monitoring, and safety observations.
+- Helped coordinate communication between engineers and contractors on active sites.
+- Interpreted engineering drawings, specifications, and construction standards in the field.

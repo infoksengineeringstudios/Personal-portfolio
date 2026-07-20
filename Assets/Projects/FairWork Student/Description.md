@@ -1,11 +1,10 @@
 ---
 title: FairWork Student
-summary: University-focused collaboration platform improving fairness, transparency, and accountability in group projects.
+summary: Full-stack collaboration platform improving fairness and accountability in university group projects.
 organization: FairWork Student
 role: Founder & Lead Developer
 period: Mar 2023 – Nov 2023
-year: "2023"
-featured: false
+featured: true
 technologies:
   - Next.js
   - TypeScript
@@ -14,51 +13,22 @@ technologies:
   - Amazon Cognito
   - AWS CDK
 learnings:
-  - Built a full-stack platform with serverless AWS architecture.
-  - Designed workflows for student collaboration and academic oversight.
-  - Applied product development and system design to an education challenge.
+  - Built a serverless full-stack platform for student and academic workflows.
+  - Designed task tracking, contribution visibility, and workload balancing features.
+  - Applied cloud architecture, authentication, and product thinking to an education problem.
 ---
 
 ## Overview
 
-FairWork Student is a university-focused collaboration platform designed to improve fairness, transparency, and accountability in group projects.
+Built a university collaboration platform to improve transparency, workload balance, and accountability in group projects for students and teaching staff.
 
-University group work often suffers from uneven workload distribution, limited visibility of individual contributions, and difficulties for teaching staff in identifying struggling teams early. FairWork Student addresses these challenges by providing students with tools to manage tasks, track contributions, and coordinate project progress, while giving educators visibility into team performance.
+## Key contributions
 
-## Problem
-
-Traditional group projects rely heavily on manual coordination and self-management, which can result in:
-
-- Unequal workload distribution between team members
-- Limited visibility of individual contributions
-- Poor communication and delayed identification of issues
-- Increased administrative workload for teaching staff
-
-## Solution
-
-The platform provides:
-
-**Student workspace**
-
-- Project and task management
-- Team member contribution tracking
-- Workload allocation using effort points
-- Progress monitoring and accountability tools
-
-**Academic workspace**
-
-- Overview of student project teams
-- Early identification of collaboration issues
-- Improved visibility into project progress and workload balance
-
-## Technical development
-
-- Built the frontend using Next.js with React and TypeScript
-- Developed serverless APIs using AWS Lambda
-- Implemented DynamoDB for scalable data storage
-- Integrated Amazon Cognito authentication
-- Used AWS CDK for infrastructure management
+- Designed student and academic workspaces for task management and team oversight.
+- Built the frontend with Next.js, React, and TypeScript.
+- Developed serverless APIs with AWS Lambda, DynamoDB, Cognito, and AWS CDK.
+- Implemented contribution tracking, effort points, and progress monitoring features.
 
 ## Outcome
 
-FairWork Student demonstrates the application of software engineering principles to solve challenges within higher education, combining product design, full-stack development, cloud architecture, and user-centred problem solving.
+Delivered a scalable platform combining product design, full-stack development, and cloud architecture for project-based learning.

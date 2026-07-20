@@ -1,10 +1,9 @@
 ---
 title: Taylemay Group
-summary: Site Engineer Intern on a large-scale 1,000-unit affordable housing development, with hands-on exposure to construction supervision, site coordination, and project delivery.
+summary: Site engineering internship on a 1,000-unit affordable housing development with hands-on construction exposure.
 organization: Taylemay Group
 role: Site Engineer Intern
-year: "2023–2024"
-period: "Nov 2023 – Feb 2024"
+period: Nov 2023 – Feb 2024
 featured: true
 cover: casting of foundation.jpg
 technologies:
@@ -13,15 +12,18 @@ technologies:
   - Safety practices
   - Progress monitoring
   - Contractor coordination
+learnings:
+  - Gained site experience on a large-scale housing development from foundation to delivery.
+  - Applied safety, coordination, and progress monitoring in an active construction environment.
+  - Understood how engineering and project management support community-focused infrastructure.
 ---
 
 ## Overview
 
-Site Engineer Intern at Taylemay Group (Nov 2023 – Feb 2024).
-
-Worked alongside site engineers on a large-scale 1,000-unit affordable housing development, gaining practical exposure to construction supervision, site coordination, and project delivery.
+Worked with site engineers on a 1,000-unit affordable housing development, supporting supervision, coordination, and delivery on site.
 
 ## Key contributions
 
-- Observed and assisted with site inspections, safety practices, contractor coordination, and construction progress monitoring within an active project environment.
-- Developed an understanding of how engineering and project management contribute to delivering infrastructure with positive social impact for local communities.
+- Assisted with site inspections, safety checks, and contractor coordination.
+- Monitored construction progress across foundation, structural, and delivery stages.
+- Supported day-to-day site activities within an active project environment.

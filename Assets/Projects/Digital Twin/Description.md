@@ -1,46 +1,33 @@
 ---
 title: Digital Twin Fire Alarm Verification System
-summary: Research project proposing a Digital Twin-enabled early warning system to reduce false fire alarms in institutional buildings.
+summary: Research project using Digital Twin data to reduce false fire alarms in institutional buildings.
+period: Feb 2025 – Jun 2025
+featured: true
 technologies:
   - Digital Twin
   - BIM
-  - IoT Sensors
-  - Data Analysis
-  - Fire Safety Engineering
-year: "2025"
-period: "Feb 2025 – Jun 2025"
-featured: true
+  - IoT sensors
+  - Data analysis
+  - Fire safety engineering
 learnings:
-  - Integrated multi-parameter environmental monitoring with building data.
-  - Developed a framework to distinguish genuine fire events from nuisance alarms.
-  - Applied Digital Twin concepts to smart building safety systems.
+  - Combined environmental sensor data with historical alarm records.
+  - Developed a framework to classify likely fire, false alarm, and uncertain events.
+  - Applied Digital Twin thinking to building safety and facility management.
 ---
 
 ## Overview
 
-False fire alarms are a persistent challenge in institutional and commercial buildings, causing unnecessary evacuations, operational disruption, emergency response costs, and reduced confidence in fire safety systems.
-
-This project proposed a Digital Twin-enabled Intelligent Early Warning System designed to operate alongside existing certified fire alarm infrastructure. The system integrates real-time environmental sensor data and historical alarm records to improve alarm interpretation by distinguishing genuine fire events from common nuisance triggers such as cooking emissions, dust, steam, and aerosol particles.
+Proposed a Digital Twin-enabled early warning system to improve fire alarm interpretation alongside existing certified infrastructure. Monash recorded 196 false alarms in 2025, highlighting the need for better contextual decision support.
 
 **Team:** Sihong Lin, Pou Chon Wong, Krishiraj Santchurn, Hao Yu Wong
 
-## Problem
+## Key contributions
 
-Conventional fire alarm systems primarily rely on threshold-based activation, where individual sensor values exceeding predefined limits trigger an alarm. While effective for life safety, these systems often lack contextual understanding of the surrounding environment.
+- Investigated Digital Twin applications in smart building and fire safety systems.
+- Supported multi-parameter monitoring across temperature, CO₂, oxygen, humidity, and particulates.
+- Helped develop event classification logic for likely fire, probable false alarm, and uncertain conditions.
+- Contributed to a dashboard concept for real-time monitoring and historical trend analysis.
 
-Historical alarm records from Monash University indicated 196 false fire alarm incidents in 2025, highlighting the need for improved alarm reliability and contextual decision support.
+## Outcome
 
-## My Role & Contributions
-
-- Investigated Digital Twin applications within smart building and fire safety systems
-- Analysed limitations of conventional threshold-based fire alarm systems
-- Supported the development of a multi-parameter environmental monitoring approach
-- Contributed to system methodology for classifying events as likely fire, probable false alarm, or uncertain condition
-- Supported the integration of building data into a Digital Twin dashboard concept
-
-## Expected Outcomes
-
-- Reduce unnecessary false alarm responses
-- Improve confidence in building fire safety systems
-- Support faster and more informed decision-making
-- Demonstrate the potential of Digital Twin technology within intelligent building management
+Delivered a research framework showing how Digital Twin data can reduce nuisance alarms and improve facility manager response.

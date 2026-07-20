@@ -1,10 +1,10 @@
 ---
 title: About
-intro: An engineer focused on digital delivery, sustainable design, and clear communication.
+intro: Civil engineering student focused on infrastructure delivery, digital workflows, and clear communication.
 ---
 
-I combine engineering fundamentals with practical site experience, digital workflow thinking, and community leadership.
+I combine engineering fundamentals with site experience, digital tools, and community leadership.
 
-Across consulting, construction, and public infrastructure placements, I have worked on technical documentation, site coordination, and project delivery. In parallel, ambassador and mentoring roles have strengthened my communication and stakeholder engagement.
+My work spans consulting documentation, construction supervision, public infrastructure inspections, sustainable design-and-build, and software development. Alongside technical delivery, I have represented Monash University, mentored students, and led student initiatives.
 
-My goal is to contribute to teams building high-quality, sustainable infrastructure with clarity, accountability, and measurable impact.
+I am interested in roles where technical rigour, communication, and practical delivery come together.

@@ -1,24 +1,29 @@
 ---
 title: Reclaimed Rosewood Coffee Table
-summary: Designed and manufactured a coffee table from over 100-year-old reclaimed rosewood, ranked 25th on the technical side of CIE A Levels Design & Technology.
+summary: Designed and built a coffee table from 100-year-old reclaimed rosewood for CIE A Levels Design & Technology.
+period: Jan 2023 – Jun 2023
+featured: true
 technologies:
   - Woodworking
   - CAD
-  - Sustainable Design
+  - Sustainable design
   - Fabrication
-year: "2023"
-period: "Jan 2023 – Jun 2023"
-featured: true
 learnings:
-  - Applied sustainable design principles to reclaimed timber.
-  - Managed the project from concept through fabrication and finishing.
-  - Demonstrated precision craftsmanship and quality control.
+  - Applied sustainable design to reclaimed timber with precision fabrication.
+  - Managed the project from concept through manufacturing and finishing.
+  - Ranked 25th on the technical side of CIE A Levels Design & Technology.
 ---
 
 ## Overview
 
-Designed and manufactured a coffee table using over 100-year-old reclaimed rosewood, applying sustainable design principles and advanced woodworking techniques.
+Designed and manufactured a coffee table from reclaimed rosewood, balancing structural integrity, craftsmanship, and sustainable material use.
 
-Produced detailed design iterations, material evaluations, and fabrication plans before constructing the final product with a focus on precision, structural integrity, and craftsmanship.
+## Key contributions
 
-Managed the project from concept development through manufacturing and finishing, demonstrating project planning, problem-solving, and quality control. Ranked 25th on the technical side of CIE A Levels Design & Technology.
+- Developed design iterations, material evaluations, and fabrication plans.
+- Built the final piece with focus on accuracy, finish quality, and structural performance.
+- Managed the full workflow from concept to completed product.
+
+## Outcome
+
+Ranked 25th on the technical side of CIE A Levels Design & Technology.

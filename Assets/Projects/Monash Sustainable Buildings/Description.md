@@ -1,40 +1,33 @@
 ---
 title: Podside Meeting Room
-summary: Student-led design-and-build project creating a modular meeting space through collaborative prototyping, fabrication, and construction.
+summary: Design-and-build project delivering a modular meeting space through prototyping, fabrication, and construction.
+period: Feb 2025 – Aug 2025
+featured: true
+cover: Podside.png
 technologies:
   - CAD
-  - Laser Cutting
-  - 3D Printing
+  - Laser cutting
+  - 3D printing
   - Woodworking
-  - Workshop Safety
-year: "2025"
-period: "Feb 2025 – Aug 2025"
-featured: true
-cover: 20250505_123948 (1).jpg
+  - Workshop safety
 learnings:
-  - Coordinated fabrication from CAD models to physical construction.
-  - Trained team members in workshop safety and equipment operation.
-  - Led prototyping activities across a multidisciplinary student team.
+  - Translated CAD models into fabricated and assembled building components.
+  - Coordinated prototyping activities across a multidisciplinary student team.
+  - Applied workshop safety and quality control through construction delivery.
 ---
 
 ## Overview
 
-The Podside Meeting Room was a student-led design-and-build project undertaken through Monash Sustainable Buildings to create a functional, modular meeting space. The project involved collaborative design, prototyping, fabrication, and construction, providing practical experience in delivering a real engineering project from concept to completion.
+Student-led Monash Sustainable Buildings project to design and build a functional modular meeting space from concept to completion.
 
-**Duration:** February 2025 – August 2025
+## Key contributions
 
-## My Role
-
-As Sub-Lead of the Prototyping Division, I coordinated fabrication activities and supported the transition from CAD designs to physical construction while ensuring workshop safety and quality standards were maintained throughout the project.
-
-## Key Contributions
-
-- Coordinated the fabrication of prototypes and construction components using woodworking tools, laser cutting, and 3D printing technologies
-- Trained team members in workshop practices and the safe operation of fabrication equipment
-- Oversaw workshop safety by enforcing PPE requirements and safe work procedures
-- Assisted in translating engineering CAD models into physical components with a focus on accuracy, quality, and manufacturability
-- Worked closely with multidisciplinary teams to deliver project milestones within the construction schedule
+- Coordinated fabrication using woodworking, laser cutting, and 3D printing.
+- Trained team members in workshop practices and safe equipment use.
+- Oversaw PPE compliance and safe work procedures during fabrication.
+- Translated CAD models into accurate physical components for assembly.
+- Delivered project milestones with multidisciplinary design and construction teams.
 
 ## Outcome
 
-The project strengthened practical engineering skills in fabrication, construction, leadership, and project coordination. Working on a real-world design-and-build project reinforced the importance of teamwork, communication, safety, and quality throughout the engineering delivery process.
+Delivered a completed meeting space while strengthening skills in fabrication, leadership, and project coordination.

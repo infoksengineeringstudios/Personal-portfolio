@@ -7,17 +7,11 @@ email: hello@example.com
 linkedin: https://linkedin.com
 ---
 
-I am a Monash engineering student focused on infrastructure delivery, digital design workflows, and practical construction experience.
+Monash civil engineering student with experience across consulting, construction, public infrastructure, and digital project delivery.
 
-My experience spans consulting documentation at Lux Consult, site supervision on affordable housing with Taylemay Group, and public infrastructure inspections with the Ministry of National Infrastructure. Alongside this, I have led and contributed to student initiatives through ACES, ambassador programs, and founding the Monash Mauritian Society.
-
-I bring a strong foundation in communication, stakeholder engagement, and technical documentation, supported by certifications in project management and accounting fundamentals.
+I have worked on structural documentation, site supervision, road design, sustainable building projects, and software development — alongside leadership roles in ambassador programs, student societies, and technical teams.
 
 ## Credentials
 
-- PMI Certification
-- Advanced Diploma in Accounting
-
-## Documents
-
-Resume, cover letter, and certification documents are available to view on this page.
+- PMI Certification (CAPM)
+- Advanced Diploma in Accounting and Business

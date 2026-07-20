@@ -7,7 +7,7 @@ technologies:
   - BIM 360
 year: "2024"
 period: "Mar 2024 – Nov 2024"
-featured: true
+featured: false
 learnings:
   - Built reusable families and view templates.
   - Improved clash awareness early in design.

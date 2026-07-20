@@ -6,23 +6,7 @@ interface ReportDownloadsProps {
 
 export function ReportDownloads({ reports }: ReportDownloadsProps) {
   if (!reports.length) {
-    return (
-      <section
-        aria-labelledby="reports-heading"
-        className="rounded-[22px] border border-dashed border-[var(--border-strong)] bg-white/40 p-6"
-      >
-        <h2
-          id="reports-heading"
-          className="text-xl font-semibold tracking-[-0.03em]"
-        >
-          Documents
-        </h2>
-        <p className="mt-2 text-sm leading-relaxed text-muted">
-          No documents yet. Add PDF, DOCX, or PPT files to this folder to view
-          them here.
-        </p>
-      </section>
-    );
+    return null;
   }
 
   return (
