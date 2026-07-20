@@ -32,6 +32,8 @@ export interface Profile {
   tagline: string;
   location: string;
   email: string;
+  studentEmail?: string;
+  phone?: string;
   linkedin?: string;
   github?: string;
   body: string;

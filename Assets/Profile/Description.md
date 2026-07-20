@@ -3,8 +3,10 @@ name: Krishiraj Santchurn
 title: Civil & Digital Engineering Student
 tagline: Engineering student combining site delivery, digital workflows, and leadership to build infrastructure with clarity and impact.
 location: Melbourne, Australia
-email: hello@example.com
-linkedin: https://linkedin.com
+email: santchurnkrishiraj@gmail.com
+studentEmail: ksan0037@student.monash.edu
+phone: 0432 399 251
+linkedin: https://www.linkedin.com/in/krishiraj-santchurn
 ---
 
 Monash civil engineering student with experience across consulting, construction, public infrastructure, and digital project delivery.

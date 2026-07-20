@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AvatarImage } from "@/components/AvatarImage";
 import { FadeIn } from "@/components/FadeIn";
 import { MarkdownBody } from "@/components/MarkdownBody";
 import { ReportDownloads } from "@/components/ReportDownloads";
@@ -32,6 +33,16 @@ export default function AboutPage() {
 
         <FadeIn delay={0.08}>
           <aside className="rounded-[24px] border border-[var(--border)] bg-white/65 p-6 sm:p-8">
+            <div className="mx-auto mb-6 aspect-square w-full max-w-[220px]">
+              <AvatarImage
+                src="/avatars/profile-circle.png"
+                hoverSrc="/avatars/profile-circle-smile.png"
+                alt={profile.name}
+                className="h-full w-full"
+                imageClassName="object-center"
+                sizes="220px"
+              />
+            </div>
             <h2 className="text-lg font-semibold tracking-[-0.03em]">Details</h2>
             <dl className="mt-5 space-y-4 text-sm">
               <div>
@@ -43,7 +54,7 @@ export default function AboutPage() {
                 <dd className="mt-1 text-foreground">{profile.location}</dd>
               </div>
               <div id="contact">
-                <dt className="text-subtle">Email</dt>
+                <dt className="text-subtle">Personal email</dt>
                 <dd className="mt-1">
                   <a
                     href={`mailto:${profile.email}`}
@@ -53,6 +64,32 @@ export default function AboutPage() {
                   </a>
                 </dd>
               </div>
+              {profile.studentEmail ? (
+                <div>
+                  <dt className="text-subtle">Student email</dt>
+                  <dd className="mt-1">
+                    <a
+                      href={`mailto:${profile.studentEmail}`}
+                      className="font-medium text-accent hover:underline"
+                    >
+                      {profile.studentEmail}
+                    </a>
+                  </dd>
+                </div>
+              ) : null}
+              {profile.phone ? (
+                <div>
+                  <dt className="text-subtle">Phone</dt>
+                  <dd className="mt-1">
+                    <a
+                      href={`tel:${profile.phone.replace(/\s/g, "")}`}
+                      className="font-medium text-accent hover:underline"
+                    >
+                      {profile.phone}
+                    </a>
+                  </dd>
+                </div>
+              ) : null}
               {profile.linkedin ? (
                 <div>
                   <dt className="text-subtle">LinkedIn</dt>

@@ -26,6 +26,12 @@ export const metadata: Metadata = {
   },
   description: profile.tagline,
   metadataBase: new URL("http://localhost:3000"),
+  icons: {
+    icon: [
+      { url: "/avatars/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/avatars/favicon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({

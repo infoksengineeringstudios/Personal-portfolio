@@ -296,6 +296,9 @@ export function getProfile(): Profile {
       typeof data.email === "string" && data.email
         ? data.email
         : "hello@example.com",
+    studentEmail:
+      typeof data.studentEmail === "string" ? data.studentEmail : undefined,
+    phone: typeof data.phone === "string" ? data.phone : undefined,
     linkedin:
       typeof data.linkedin === "string" ? data.linkedin : undefined,
     github: typeof data.github === "string" ? data.github : undefined,
