@@ -18,6 +18,7 @@ export default function AboutPage() {
   return (
     <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
       <SectionHeading
+        index="04"
         eyebrow="Profile"
         title={page.title}
         description={page.intro}
@@ -32,7 +33,7 @@ export default function AboutPage() {
         </FadeIn>
 
         <FadeIn delay={0.08}>
-          <aside className="rounded-[24px] border border-[var(--border)] bg-white/65 p-6 sm:p-8">
+          <aside className="corner-marks sheet p-6 sm:p-8">
             <div className="mx-auto mb-6 aspect-square w-full max-w-[220px]">
               <AvatarImage
                 src="/avatars/profile-circle.png"
@@ -46,15 +47,15 @@ export default function AboutPage() {
             <h2 className="text-lg font-semibold tracking-[-0.03em]">Details</h2>
             <dl className="mt-5 space-y-4 text-sm">
               <div>
-                <dt className="text-subtle">Focus</dt>
+                <dt className="label-mono label-mono--muted">Focus</dt>
                 <dd className="mt-1 text-foreground">{profile.title}</dd>
               </div>
               <div>
-                <dt className="text-subtle">Location</dt>
+                <dt className="label-mono label-mono--muted">Location</dt>
                 <dd className="mt-1 text-foreground">{profile.location}</dd>
               </div>
               <div id="contact">
-                <dt className="text-subtle">Personal email</dt>
+                <dt className="label-mono label-mono--muted">Personal email</dt>
                 <dd className="mt-1">
                   <a
                     href={`mailto:${profile.email}`}
@@ -66,7 +67,7 @@ export default function AboutPage() {
               </div>
               {profile.studentEmail ? (
                 <div>
-                  <dt className="text-subtle">Student email</dt>
+                  <dt className="label-mono label-mono--muted">Student email</dt>
                   <dd className="mt-1">
                     <a
                       href={`mailto:${profile.studentEmail}`}
@@ -79,7 +80,7 @@ export default function AboutPage() {
               ) : null}
               {profile.phone ? (
                 <div>
-                  <dt className="text-subtle">Phone</dt>
+                  <dt className="label-mono label-mono--muted">Phone</dt>
                   <dd className="mt-1">
                     <a
                       href={`tel:${profile.phone.replace(/\s/g, "")}`}
@@ -92,7 +93,7 @@ export default function AboutPage() {
               ) : null}
               {profile.linkedin ? (
                 <div>
-                  <dt className="text-subtle">LinkedIn</dt>
+                  <dt className="label-mono label-mono--muted">LinkedIn</dt>
                   <dd className="mt-1">
                     <a
                       href={profile.linkedin}

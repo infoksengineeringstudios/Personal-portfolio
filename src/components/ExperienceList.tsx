@@ -19,7 +19,10 @@ export function ExperienceList({ items, basePath }: ExperienceListProps) {
               className="group flex flex-col gap-2 py-7 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
             >
               <div>
-                <h3 className="text-xl font-semibold tracking-[-0.03em] text-foreground group-hover:text-accent">
+                <h3 className="flex items-baseline gap-3 text-xl font-semibold tracking-[-0.03em] text-foreground group-hover:text-accent">
+                  <span className="font-mono text-sm font-medium text-accent">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                   {item.title}
                 </h3>
                 <p className="mt-1 text-sm text-muted">
@@ -29,7 +32,7 @@ export function ExperienceList({ items, basePath }: ExperienceListProps) {
                   {item.summary}
                 </p>
               </div>
-              <span className="shrink-0 text-sm text-subtle">
+              <span className="shrink-0 font-mono text-xs text-subtle sm:text-sm">
                 {getExperiencePeriod(item)}
               </span>
             </Link>

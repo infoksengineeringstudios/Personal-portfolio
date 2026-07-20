@@ -21,7 +21,7 @@ export function TechStack({
         {technologies.map((tech) => (
           <li
             key={tech}
-            className="rounded-full border border-[var(--border)] bg-white/70 px-3.5 py-1.5 text-sm text-muted"
+            className="rounded-[4px] border border-[var(--border)] bg-[var(--accent-soft)] px-2.5 py-1 font-mono text-xs uppercase tracking-[0.04em] text-accent"
           >
             {tech}
           </li>

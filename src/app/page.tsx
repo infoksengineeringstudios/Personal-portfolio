@@ -4,6 +4,11 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { FadeIn } from "@/components/FadeIn";
 import {
+  BeamSectionDrawing,
+  ContourDrawing,
+  CraneDrawing,
+} from "@/components/TechDrawings";
+import {
   getFeaturedProjects,
   getItems,
   getPageContent,
@@ -27,17 +32,22 @@ export default function HomePage() {
         tagline={profile.tagline}
       />
 
-      <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+      <section className="relative mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
+        {/* Tower crane rising in the margin */}
+        <CraneDrawing
+          className="pointer-events-none absolute -right-40 top-6 hidden h-[520px] w-[220px] text-foreground opacity-60 2xl:block"
+        />
         <SectionHeading
+          index="01"
           eyebrow="Selected work"
           title={projectsIntro.title}
           description={projectsIntro.intro}
           action={
             <Link
               href="/projects"
-              className="text-sm font-medium text-accent hover:underline"
+              className="font-mono text-sm font-medium text-accent hover:underline"
             >
-              All projects
+              All projects →
             </Link>
           }
         />
@@ -48,41 +58,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-[var(--border)] bg-white/40">
-        <div className="mx-auto grid w-full max-w-6xl gap-10 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <section className="cyanotype relative overflow-hidden border-y-2 border-[var(--accent-deep)]">
+        <BeamSectionDrawing className="pointer-events-none absolute -right-6 top-1/2 hidden h-[260px] w-[200px] -translate-y-1/2 text-white opacity-40 lg:block" />
+        <div className="relative mx-auto grid w-full max-w-6xl gap-10 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <FadeIn>
-            <p className="text-sm font-medium uppercase tracking-[0.16em] text-subtle">
+            <p className="label-mono flex items-center gap-3">
+              <span className="border border-white/30 px-1.5 py-0.5">02</span>
               Experience
+              <span aria-hidden="true" className="h-px w-10 bg-white/30" />
             </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl">
               Internships &amp; practice
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted">
+            <p className="mt-4 text-base leading-relaxed text-[#b9bec7]">
               Industry experience across consulting, construction, and public
               infrastructure — from design documentation to live site delivery.
             </p>
             <Link
               href="/internships"
-              className="mt-6 inline-flex text-sm font-medium text-accent hover:underline"
+              className="mt-6 inline-flex font-mono text-sm font-medium text-[#ef8f8f] hover:underline"
             >
-              View internships
+              View internships →
             </Link>
           </FadeIn>
 
-          <ul className="space-y-0 divide-y divide-[var(--border)]">
+          <ul className="space-y-0 divide-y divide-white/10">
             {internships.map((item, index) => (
               <FadeIn key={item.slug} delay={0.05 * index}>
                 <li className="flex items-baseline justify-between gap-6 py-5">
                   <div>
                     <Link
                       href={`/internships/${item.slug}`}
-                      className="text-lg font-semibold tracking-[-0.03em] hover:text-accent"
+                      className="flex items-baseline gap-3 text-lg font-semibold tracking-[-0.03em] text-white hover:text-[#ef8f8f]"
                     >
+                      <span className="font-mono text-sm font-medium text-[#ef8f8f]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
                       {item.title}
                     </Link>
-                    <p className="mt-1 text-sm text-muted">{item.role}</p>
+                    <p className="mt-1 text-sm text-[#b9bec7]">{item.role}</p>
                   </div>
-                  <span className="text-sm text-subtle">
+                  <span className="font-mono text-xs text-[#8b919c] sm:text-sm">
                     {getExperiencePeriod(item)}
                   </span>
                 </li>
@@ -95,15 +111,16 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
         <SectionHeading
+          index="03"
           eyebrow="Community"
           title={leadershipIntro.title}
           description={leadershipIntro.intro}
           action={
             <Link
               href="/leadership"
-              className="text-sm font-medium text-accent hover:underline"
+              className="font-mono text-sm font-medium text-accent hover:underline"
             >
-              All leadership
+              All leadership →
             </Link>
           }
         />
@@ -126,7 +143,7 @@ export default function HomePage() {
                       {item.summary}
                     </p>
                   </div>
-                  <span className="shrink-0 text-sm text-subtle">
+                  <span className="shrink-0 font-mono text-xs text-subtle sm:text-sm">
                     {getExperiencePeriod(item)}
                   </span>
                 </Link>
@@ -138,21 +155,30 @@ export default function HomePage() {
 
       <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
         <FadeIn>
-          <div className="rounded-[28px] border border-[var(--border)] bg-[linear-gradient(135deg,rgba(255,255,255,0.8),rgba(232,238,245,0.9))] px-6 py-12 text-center sm:px-12 sm:py-16">
-            <h2 className="text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+          <div className="corner-marks sheet relative overflow-hidden px-6 py-12 text-center sm:px-12 sm:py-16">
+            {/* Survey contours in the background */}
+            <ContourDrawing className="pointer-events-none absolute inset-0 h-full w-full text-foreground opacity-35" />
+            <span className="stamp absolute right-4 top-4 hidden md:inline-block">
+              Open to opportunities
+            </span>
+            <p className="label-mono relative">RFT — Request for Tender</p>
+            <h2 className="relative mt-3 text-3xl font-semibold tracking-[-0.03em] sm:text-4xl">
               Let&apos;s build something precise
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-muted">
+            <p className="relative mx-auto mt-4 max-w-lg text-base leading-relaxed text-muted">
               Open to engineering roles, research collaborations, and digital
               delivery projects. Resume, certifications, and supporting
               documents are available in the About section.
             </p>
             <a
               href={`mailto:${profile.email}`}
-              className="btn-primary mt-8 h-12 px-6 text-sm"
+              className="btn-primary relative mt-8 h-12 w-full px-6 text-sm sm:w-auto"
             >
               {profile.email}
             </a>
+            <p className="mt-6 md:hidden">
+              <span className="stamp">Open to opportunities</span>
+            </p>
           </div>
         </FadeIn>
       </section>

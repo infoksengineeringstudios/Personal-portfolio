@@ -17,7 +17,7 @@ export function KeyLearnings({ learnings }: KeyLearningsProps) {
         {learnings.map((learning, index) => (
           <li key={learning} className="flex gap-4">
             <span
-              className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[var(--accent-soft)] text-xs font-semibold text-accent"
+              className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center border border-[var(--border-strong)] bg-white font-mono text-xs font-semibold text-accent"
               aria-hidden="true"
             >
               {index + 1}

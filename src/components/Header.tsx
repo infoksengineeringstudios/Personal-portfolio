@@ -37,7 +37,7 @@ export function Header({ name }: HeaderProps) {
       className={cn(
         "sticky top-0 z-50 transition-[background,border,backdrop-filter] duration-300",
         scrolled
-          ? "border-b border-[var(--border)] bg-[rgba(244,246,249,0.78)] backdrop-blur-xl"
+          ? "border-b border-[var(--border)] bg-[rgba(244,247,251,0.85)] backdrop-blur-xl"
           : "border-b border-transparent bg-transparent",
       )}
     >
@@ -45,10 +45,17 @@ export function Header({ name }: HeaderProps) {
         <Link
           href="/"
           onClick={closeMenu}
-          className="text-[0.95rem] font-semibold tracking-[-0.03em] text-foreground"
+          className="flex items-center gap-2.5 text-[0.95rem] font-semibold tracking-[-0.03em] text-foreground"
           aria-label={`${name} home`}
         >
-          {name}
+          <span
+            aria-hidden="true"
+            className="flex h-7 w-7 items-center justify-center border-2 border-accent font-mono text-[0.7rem] font-bold text-accent"
+          >
+            KS
+          </span>
+          <span className="hidden sm:inline">{name}</span>
+          <span className="sm:hidden">{name.split(" ")[0]}</span>
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">
@@ -60,10 +67,10 @@ export function Header({ name }: HeaderProps) {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "rounded-full px-3.5 py-2 text-sm transition-colors",
+                  "rounded-[6px] px-3.5 py-2 font-mono text-[0.8rem] uppercase tracking-[0.08em] transition-colors",
                   active
                     ? "bg-[var(--accent-soft)] text-accent"
-                    : "text-muted hover:text-foreground",
+                    : "text-muted hover:text-accent",
                 )}
                 aria-current={active ? "page" : undefined}
               >
@@ -81,7 +88,7 @@ export function Header({ name }: HeaderProps) {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border)] bg-white/70 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-[6px] border border-[var(--border-strong)] bg-white/70 md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -116,7 +123,7 @@ export function Header({ name }: HeaderProps) {
           <motion.nav
             id="mobile-nav"
             aria-label="Mobile"
-            className="border-t border-[var(--border)] bg-[rgba(244,246,249,0.96)] px-5 py-4 backdrop-blur-xl md:hidden"
+            className="border-t border-[var(--border)] bg-[rgba(244,247,251,0.97)] px-5 py-4 backdrop-blur-xl md:hidden"
             initial={reduceMotion ? false : { opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={reduceMotion ? undefined : { opacity: 0, height: 0 }}
@@ -127,8 +134,11 @@ export function Header({ name }: HeaderProps) {
                   <Link
                     href={link.href}
                     onClick={closeMenu}
-                    className="block rounded-xl px-3 py-3 text-base text-foreground"
+                    className="flex items-baseline gap-3 rounded-[6px] px-3 py-3 text-base text-foreground active:bg-[var(--accent-soft)]"
                   >
+                    <span className="font-mono text-xs text-accent">
+                      {String(links.indexOf(link) + 1).padStart(2, "0")}
+                    </span>
                     {link.label}
                   </Link>
                 </li>

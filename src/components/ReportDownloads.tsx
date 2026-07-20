@@ -24,13 +24,13 @@ export function ReportDownloads({ reports }: ReportDownloadsProps) {
               href={report.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-between gap-4 rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-3.5 transition-colors hover:border-[var(--border-strong)] hover:bg-white"
+              className="flex items-center justify-between gap-4 rounded-[var(--radius)] border border-[var(--border)] bg-white/80 px-4 py-3.5 transition-colors hover:border-[var(--border-strong)] hover:bg-white"
             >
               <div>
                 <p className="font-medium tracking-[-0.02em] text-foreground">
                   {report.name}
                 </p>
-                <p className="mt-0.5 text-xs uppercase tracking-[0.08em] text-subtle">
+                <p className="mt-0.5 font-mono text-xs uppercase tracking-[0.08em] text-subtle">
                   {report.filename.split(".").pop()}
                 </p>
               </div>

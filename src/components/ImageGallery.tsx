@@ -41,14 +41,15 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
         <h2 id={labelId} className="text-xl font-semibold tracking-[-0.03em]">
           Gallery
         </h2>
-        <p className="text-sm text-subtle">
-          {active + 1} / {images.length}
+        <p className="font-mono text-sm text-subtle">
+          {String(active + 1).padStart(2, "0")} /{" "}
+          {String(images.length).padStart(2, "0")}
         </p>
       </div>
 
       <button
         type="button"
-        className="relative block w-full overflow-hidden rounded-[24px] border border-[var(--border)] bg-[#d8e2ec] text-left"
+        className="corner-marks relative block w-full overflow-hidden rounded-[var(--radius)] border border-[var(--border)] bg-white text-left"
         onClick={() => setLightbox(true)}
         aria-label={`Open larger view of ${current.name}`}
       >
@@ -58,7 +59,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
               key={current.url}
               src={current.url}
               alt={`${title} — ${current.name}`}
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-contain"
               initial={reduceMotion ? false : { opacity: 0.35 }}
               animate={{ opacity: 1 }}
               exit={reduceMotion ? undefined : { opacity: 0 }}
@@ -77,7 +78,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
               aria-label={`Show ${image.name}`}
               aria-current={index === active ? "true" : undefined}
               className={cn(
-                "relative aspect-[4/3] w-full overflow-hidden rounded-xl border transition",
+                "relative aspect-[4/3] w-full overflow-hidden rounded-[4px] border transition",
                 index === active
                   ? "border-accent ring-2 ring-[var(--accent-soft)]"
                   : "border-[var(--border)] opacity-80 hover:opacity-100",

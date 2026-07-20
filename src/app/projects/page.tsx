@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MarkdownBody } from "@/components/MarkdownBody";
+import { RoadSectionDrawing } from "@/components/TechDrawings";
 import { getAllProjects, getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -30,6 +31,8 @@ export default function ProjectsPage() {
           <ProjectCard key={project.slug} project={project} index={index} />
         ))}
       </div>
+
+      <RoadSectionDrawing className="pointer-events-none mx-auto mt-16 w-full max-w-2xl text-foreground opacity-60" />
     </div>
   );
 }

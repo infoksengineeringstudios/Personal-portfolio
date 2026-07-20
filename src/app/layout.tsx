@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono, Outfit } from "next/font/google";
+import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { getProfile } from "@/lib/content";
 import "./globals.css";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const grotesk = Space_Grotesk({
+  variable: "--font-grotesk",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
@@ -40,9 +46,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${jetbrains.variable} h-full`}>
+    <html
+      lang="en"
+      className={`${grotesk.variable} ${inter.variable} ${jetbrains.variable} h-full`}
+    >
       <body className="relative flex min-h-full flex-col antialiased">
-        <div className="noise" aria-hidden="true" />
         <a href="#main" className="skip-link">
           Skip to content
         </a>
