@@ -48,12 +48,13 @@ export function Header({ name }: HeaderProps) {
           className="flex items-center gap-2.5 text-[0.95rem] font-semibold tracking-[-0.03em] text-foreground"
           aria-label={`${name} home`}
         >
-          <span
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo-mark.svg"
+            alt=""
             aria-hidden="true"
-            className="flex h-7 w-7 items-center justify-center border-2 border-accent font-mono text-[0.7rem] font-bold text-accent"
-          >
-            KS
-          </span>
+            className="h-7 w-auto sm:h-8"
+          />
           <span className="hidden sm:inline">{name}</span>
           <span className="sm:hidden">{name.split(" ")[0]}</span>
         </Link>
