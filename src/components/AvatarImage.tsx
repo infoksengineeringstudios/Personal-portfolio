@@ -30,7 +30,7 @@ export function AvatarImage({
 
   return (
     <div
-      className={cn("relative", className)}
+      className={cn("relative h-full w-full", className)}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       onFocus={() => setHovered(true)}

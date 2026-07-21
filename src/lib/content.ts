@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import type {
+  Certification,
   ContentItem,
   ContentKind,
   MediaFile,
@@ -142,7 +143,11 @@ function firstParagraph(markdown: string): string {
   const block = plain.split(/\n{2,}/).find((part) => part.trim().length > 0);
   if (!block) return "";
   const sentence = block.replace(/\n/g, " ").trim();
-  return sentence.length > 220 ? `${sentence.slice(0, 217).trim()}...` : sentence;
+  if (sentence.length <= 220) return sentence;
+  // Truncate at a word boundary rather than mid-word.
+  const clipped = sentence.slice(0, 217);
+  const lastSpace = clipped.lastIndexOf(" ");
+  return `${(lastSpace > 120 ? clipped.slice(0, lastSpace) : clipped).trim()}…`;
 }
 
 function titleFromBody(markdown: string, fallback: string): string {
@@ -352,6 +357,36 @@ export function getProfile(): Profile {
   };
 }
 
+
+const CERTIFICATIONS: Certification[] = [
+  {
+    label: "CAPM®",
+    issuer: "Certified Associate in Project Management · PMI",
+    monogram: "PM",
+    file: "capm.png",
+  },
+  {
+    label: "ACCA",
+    issuer: "Advanced Diploma in Accounting & Business",
+    monogram: "AC",
+    file: "acca.png",
+  },
+  {
+    label: "Monash University",
+    issuer: "BEng (Hons) Civil Engineering",
+    monogram: "M",
+    file: "monash.png",
+  },
+].map(({ file, ...rest }) => {
+  const exists = fs.existsSync(
+    path.join(ROOT, "public", "badges", file),
+  );
+  return exists ? { ...rest, image: `/badges/${file}` } : rest;
+});
+
+export function getCertifications(): Certification[] {
+  return CERTIFICATIONS;
+}
 
 export function getPageContent(
   filename: "About" | "Projects" | "Internships" | "Leadership",

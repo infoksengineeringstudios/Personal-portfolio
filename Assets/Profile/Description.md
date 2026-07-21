@@ -1,7 +1,7 @@
 ---
 name: Krishiraj Santchurn
-title: Civil & Digital Engineering Student
-tagline: Engineering student combining site delivery, digital workflows, and leadership to build infrastructure with clarity and impact.
+title: Civil Engineering Student
+tagline: Commercially aware engineering student combining civil engineering, digital innovation and practical experience to create smarter, more sustainable infrastructure.
 location: Melbourne, Australia
 email: santchurnkrishiraj@gmail.com
 studentEmail: ksan0037@student.monash.edu
@@ -15,5 +15,8 @@ I have worked on structural documentation, site supervision, road design, sustai
 
 ## Credentials
 
-- PMI Certification (CAPM)
-- Advanced Diploma in Accounting and Business
+- Bachelor(Hons) Civil Engineering
+- Minor Environmental Engineering
+- Certified Associate in Project Management (PMI)
+- Advanced Diploma in Accounting and Business (ACCA)
+

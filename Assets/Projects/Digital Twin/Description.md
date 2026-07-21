@@ -1,7 +1,7 @@
 ---
 title: Digital Twin Fire Alarm Verification System
 summary: Research project using Digital Twin data to reduce false fire alarms in institutional buildings.
-period: Feb 2025 – Jun 2025
+period: Feb 2026 – Nov 2026
 featured: true
 technologies:
   - Digital Twin
@@ -31,3 +31,4 @@ Proposed a Digital Twin-enabled early warning system to improve fire alarm inter
 ## Outcome
 
 Delivered a research framework showing how Digital Twin data can reduce nuisance alarms and improve facility manager response.
+

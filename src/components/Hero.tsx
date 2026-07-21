@@ -116,7 +116,7 @@ export function Hero({ name, title, tagline, resumeUrl }: HeroProps) {
                 src="/avatars/fullbody-waving.png"
                 hoverSrc="/avatars/fullbody-smile.png"
                 alt={`${name} avatar`}
-                className="absolute inset-0"
+                className="h-full w-full"
                 imageClassName="object-bottom"
                 priority
               />

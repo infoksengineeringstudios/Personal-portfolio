@@ -46,3 +46,16 @@ export interface PageContent {
   intro: string;
   body: string;
 }
+
+export interface Certification {
+  /** Short display name, e.g. "CAPM®". */
+  label: string;
+  /** Issuer / what it is, e.g. "Project Management Institute". */
+  issuer: string;
+  /** Two-letter fallback monogram shown when no badge image is present. */
+  monogram: string;
+  /** Badge image URL under /badges, present only when the file exists. */
+  image?: string;
+  /** Optional verification / credential URL. */
+  href?: string;
+}

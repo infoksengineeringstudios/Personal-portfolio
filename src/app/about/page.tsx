@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { AvatarImage } from "@/components/AvatarImage";
+import { Certifications } from "@/components/Certifications";
 import { FadeIn } from "@/components/FadeIn";
 import { MarkdownBody } from "@/components/MarkdownBody";
 import { ReportDownloads } from "@/components/ReportDownloads";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ScaffoldingDrawing } from "@/components/TechDrawings";
-import { getPageContent, getProfile } from "@/lib/content";
+import { getCertifications, getPageContent, getProfile } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const page = getPageContent("About");
   const profile = getProfile();
+  const certifications = getCertifications();
 
   return (
     <div className="mx-auto w-full max-w-6xl px-5 py-14 sm:px-8 sm:py-20">
@@ -141,6 +143,10 @@ export default function AboutPage() {
           </aside>
         </FadeIn>
       </div>
+
+      <FadeIn>
+        <Certifications items={certifications} />
+      </FadeIn>
     </div>
   );
 }
