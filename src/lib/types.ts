@@ -37,6 +37,7 @@ export interface Profile {
   linkedin?: string;
   github?: string;
   body: string;
+  resume?: MediaFile;
   documents: MediaFile[];
 }
 

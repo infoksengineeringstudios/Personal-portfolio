@@ -35,9 +35,41 @@ const PLACEHOLDER_COVERS = [
   "/placeholders/cover-06.svg",
 ];
 
+/**
+ * Decode a file buffer as text, tolerating UTF-16 (with or without BOM) and a
+ * UTF-8 BOM. Windows editors (Notepad, PowerShell `>`) often save markdown as
+ * UTF-16LE, which would otherwise make gray-matter fail to parse frontmatter
+ * and silently blank out a page. This keeps content robust to that.
+ */
+function decodeBuffer(buffer: Buffer): string {
+  if (buffer.length >= 2 && buffer[0] === 0xff && buffer[1] === 0xfe) {
+    return buffer.subarray(2).toString("utf16le");
+  }
+  if (buffer.length >= 2 && buffer[0] === 0xfe && buffer[1] === 0xff) {
+    return buffer.subarray(2).swap16().toString("utf16le");
+  }
+  if (
+    buffer.length >= 3 &&
+    buffer[0] === 0xef &&
+    buffer[1] === 0xbb &&
+    buffer[2] === 0xbf
+  ) {
+    return buffer.subarray(3).toString("utf8");
+  }
+  // BOM-less UTF-16LE heuristic: ASCII-range markdown produces many 0x00 bytes
+  // in the high byte of each code unit.
+  const sample = buffer.subarray(0, 64);
+  let nulls = 0;
+  for (const byte of sample) if (byte === 0x00) nulls += 1;
+  if (sample.length > 8 && nulls / sample.length > 0.25) {
+    return buffer.toString("utf16le");
+  }
+  return buffer.toString("utf8");
+}
+
 function readFileSafe(filePath: string): string {
   try {
-    return fs.readFileSync(filePath, "utf8").trim();
+    return decodeBuffer(fs.readFileSync(filePath)).replace(/\r\n/g, "\n").trim();
   } catch {
     return "";
   }
@@ -255,7 +287,7 @@ export function getProfile(): Profile {
   const raw = readFileSafe(path.join(ASSETS, "Profile", "Description.md"));
   const { data, content } = matter(raw || "---\n---\n");
   const profileDir = path.join(ASSETS, "Profile");
-  const documents: MediaFile[] = fs.existsSync(profileDir)
+  const allDocuments: MediaFile[] = fs.existsSync(profileDir)
     ? fs
         .readdirSync(profileDir, { withFileTypes: true })
         .filter((entry) => entry.isFile())
@@ -274,6 +306,16 @@ export function getProfile(): Profile {
           mimeType: getMimeType(filename),
         }))
     : [];
+
+  // Detect a resume/CV file (prefer PDF for in-browser preview), then surface
+  // it as `resume` and keep it out of the generic Documents list.
+  const isResume = (file: MediaFile) => /resume|cv/i.test(file.filename);
+  const resume =
+    allDocuments.find((f) => isResume(f) && /\.pdf$/i.test(f.filename)) ??
+    allDocuments.find(isResume);
+  const documents = allDocuments.filter(
+    (f) => !isResume(f) && f.url !== resume?.url,
+  );
 
   return {
     name:
@@ -305,6 +347,7 @@ export function getProfile(): Profile {
     body:
       content.trim() ||
       "Placeholder about section. Edit `Assets/Profile/Description.md` to introduce yourself, your focus areas, and what you are looking for next.",
+    resume,
     documents,
   };
 }

@@ -1,7 +1,7 @@
 ---
 title: Rafflesia Vision Valley — Arterial Link Road Design
 summary: Planned and designed two Austroads-compliant arterial link roads for a logistics hub using Civil 3D.
-period: Mar 2025 – Nov 2025
+period: July 2025 – Nov 2025
 featured: true
 cover: Final Civil3d plan.png
 technologies:
@@ -17,7 +17,7 @@ learnings:
 
 ## Overview
 
-Designed two arterial link roads connecting a logistics hub to Elmina Road and Airiza Road, with a 30-year design life and Austroads compliance.
+Designed two arterial link roads connecting a logistics hub to Elmina Road and Airiza Road, with a 30-year design life and Austroads compliance as part of Road Engineering Unit.
 
 ## Key contributions
 
@@ -29,3 +29,4 @@ Designed two arterial link roads connecting a logistics hub to Elmina Road and A
 ## Outcome
 
 Final designs met Austroads requirements with estimated costs of $23.37M (Elmina link) and $35.87M (Airiza link).
+

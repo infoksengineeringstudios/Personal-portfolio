@@ -46,6 +46,31 @@ export default function AboutPage() {
                 sizes="220px"
               />
             </div>
+            {profile.resume ? (
+              <a
+                href={profile.resume.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="btn-primary mb-6 inline-flex h-11 w-full items-center justify-center gap-2 px-5 text-sm"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-4 w-4"
+                >
+                  <path
+                    d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                Download CV
+              </a>
+            ) : null}
             <h2 className="text-lg font-semibold tracking-[-0.03em]">Details</h2>
             <dl className="mt-5 space-y-4 text-sm">
               <div>

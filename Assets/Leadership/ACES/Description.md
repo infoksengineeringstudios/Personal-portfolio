@@ -3,7 +3,7 @@ title: ACES
 summary: Committee member supporting events, academic initiatives, and industry engagement for civil engineering students.
 organization: Monash Association of Civil Engineering Students
 role: Events & Academic Committees
-period: Apr 2024 – Present
+period: April 2024 – Present
 featured: true
 technologies:
   - Event coordination
@@ -21,6 +21,7 @@ Contributed to the Events and Academic Committees, supporting student engagement
 
 ## Key contributions
 
-- Supported Industry Night and the First-Year Specialisation Seminar.
+- Supported Industry Night, Vacation Night, Software Training Sessions and the First-Year Specialisation Seminar.
 - Promoted club initiatives through classroom presentations and student outreach.
 - Contributed to academic and industry guides for civil engineering students.
+

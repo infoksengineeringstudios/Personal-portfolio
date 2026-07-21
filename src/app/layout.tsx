@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { getProfile } from "@/lib/content";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const grotesk = Space_Grotesk({
@@ -25,18 +26,45 @@ const jetbrains = JetBrains_Mono({
 
 const profile = getProfile();
 
+const siteTitle = `${profile.name} · Engineering Portfolio`;
+
 export const metadata: Metadata = {
   title: {
-    default: `${profile.name} · Engineering Portfolio`,
+    default: siteTitle,
     template: `%s · ${profile.name}`,
   },
   description: profile.tagline,
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/avatars/favicon-16.png", sizes: "16x16", type: "image/png" },
       { url: "/avatars/favicon-32.png", sizes: "32x32", type: "image/png" },
     ],
+  },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: siteTitle,
+    title: siteTitle,
+    description: profile.tagline,
+    locale: "en_AU",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: `${profile.name} — ${profile.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: profile.tagline,
+    images: ["/og-image.png"],
   },
 };
 

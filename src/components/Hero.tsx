@@ -9,9 +9,10 @@ interface HeroProps {
   name: string;
   title: string;
   tagline: string;
+  resumeUrl?: string;
 }
 
-export function Hero({ name, title, tagline }: HeroProps) {
+export function Hero({ name, title, tagline, resumeUrl }: HeroProps) {
   const year = new Date().getFullYear();
 
   return (
@@ -50,6 +51,31 @@ export function Hero({ name, title, tagline }: HeroProps) {
             <Link href="/about" className="btn-secondary h-12 px-6 text-sm">
               About me
             </Link>
+            {resumeUrl ? (
+              <a
+                href={resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+                className="btn-secondary inline-flex h-12 items-center gap-2 px-6 text-sm"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-4 w-4"
+                >
+                  <path
+                    d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"
+                    stroke="currentColor"
+                    strokeWidth="1.7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                Download CV
+              </a>
+            ) : null}
           </div>
 
           <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-[var(--border)] pt-5">

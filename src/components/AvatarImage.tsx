@@ -46,7 +46,7 @@ export function AvatarImage({
             duration: reduceMotion ? 0 : 0.35,
             ease: [0.22, 1, 0.36, 1],
           }}
-          className="relative h-full w-full"
+          className="absolute inset-0"
         >
           <Image
             src={activeSrc}

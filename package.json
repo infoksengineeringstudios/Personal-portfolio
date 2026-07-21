@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/check-encoding.mjs --fix",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "check:encoding": "node scripts/check-encoding.mjs",
+    "check:encoding:fix": "node scripts/check-encoding.mjs --fix"
   },
   "dependencies": {
     "framer-motion": "^12.42.2",

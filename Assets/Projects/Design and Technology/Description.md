@@ -1,11 +1,14 @@
 ---
-title: Reclaimed Rosewood Coffee Table
+title: Rosewood Coffee Table
 summary: Designed and built a coffee table from 100-year-old reclaimed rosewood for CIE A Levels Design & Technology.
-period: Jan 2023 – Jun 2023
+period: January 2022 – December 2022
 featured: true
 technologies:
   - Woodworking
-  - CAD
+  - AutoCAD
+  - Sketch Up
+  - Photoshop
+  - word
   - Sustainable design
   - Fabrication
 learnings:
@@ -27,3 +30,4 @@ Designed and manufactured a coffee table from reclaimed rosewood, balancing stru
 ## Outcome
 
 Ranked 25th on the technical side of CIE A Levels Design & Technology.
+

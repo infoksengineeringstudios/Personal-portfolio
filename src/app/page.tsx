@@ -30,6 +30,7 @@ export default function HomePage() {
         name={profile.name}
         title={profile.title}
         tagline={profile.tagline}
+        resumeUrl={profile.resume?.url}
       />
 
       <section className="relative mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28">

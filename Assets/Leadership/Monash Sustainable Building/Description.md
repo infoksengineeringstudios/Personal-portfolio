@@ -3,7 +3,7 @@ title: Monash Sustainable Buildings
 summary: Prototyping Sub-Lead coordinating fabrication, mentoring, and delivery across student-led building projects.
 organization: Monash Sustainable Buildings
 role: Prototyping Division Sub-Lead
-period: Jul 2023 – Mar 2026
+period: July 2023 – March 2026
 featured: true
 cover: 20250505_123948 (1).jpg
 technologies:
@@ -11,6 +11,7 @@ technologies:
   - 3D printing
   - Laser cutting
   - Woodworking
+  - Project management
   - Workshop safety
   - Team leadership
 learnings:
@@ -30,3 +31,4 @@ Progressed from technical team member to Sub-Lead of the Prototyping Division, s
 - Recruited, onboarded, and mentored new team members.
 - Enforced workshop safety, PPE requirements, and equipment procedures.
 - Collaborated with engineering, architecture, and project teams on delivery.
+

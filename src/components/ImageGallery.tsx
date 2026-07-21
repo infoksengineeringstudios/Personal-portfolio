@@ -13,6 +13,7 @@ interface ImageGalleryProps {
 export function ImageGallery({ images, title }: ImageGalleryProps) {
   const [active, setActive] = useState(0);
   const [lightbox, setLightbox] = useState(false);
+  const [ratios, setRatios] = useState<Record<string, number>>({});
   const reduceMotion = useReducedMotion();
   const labelId = useId();
 
@@ -35,6 +36,20 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
 
   const current = images[active] ?? images[0];
 
+  // Fit the stage to the current image's orientation, clamped so extreme
+  // panoramas / tall portraits stay within a sensible band.
+  const naturalRatio = ratios[current.url];
+  const stageRatio = naturalRatio
+    ? Math.min(Math.max(naturalRatio, 0.72), 1.6)
+    : 1.5;
+
+  const recordRatio = (url: string, w: number, h: number) => {
+    if (!w || !h) return;
+    setRatios((prev) =>
+      prev[url] ? prev : { ...prev, [url]: w / h },
+    );
+  };
+
   return (
     <section aria-labelledby={labelId} className="space-y-4">
       <div className="flex items-end justify-between gap-4">
@@ -49,22 +64,45 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
 
       <button
         type="button"
-        className="corner-marks relative block w-full overflow-hidden rounded-[var(--radius)] border border-[var(--border)] bg-white text-left"
+        className="corner-marks relative block w-full overflow-hidden rounded-[var(--radius)] border border-[var(--border)] bg-[#e9eae8] text-left"
         onClick={() => setLightbox(true)}
         aria-label={`Open larger view of ${current.name}`}
       >
-        <div className="relative aspect-[16/10]">
+        <div
+          className="relative mx-auto max-h-[72vh] w-full transition-[aspect-ratio] duration-300"
+          style={{ aspectRatio: stageRatio }}
+        >
           <AnimatePresence mode="wait">
-            <motion.img
+            <motion.div
               key={current.url}
-              src={current.url}
-              alt={`${title} — ${current.name}`}
-              className="absolute inset-0 h-full w-full object-contain"
+              className="absolute inset-0"
               initial={reduceMotion ? false : { opacity: 0.35 }}
               animate={{ opacity: 1 }}
               exit={reduceMotion ? undefined : { opacity: 0 }}
               transition={{ duration: 0.35 }}
-            />
+            >
+              {/* Blurred backdrop fills any letterbox gap for off-ratio images */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={current.url}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-2xl"
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={current.url}
+                alt={`${title} — ${current.name}`}
+                className="absolute inset-0 h-full w-full object-contain"
+                onLoad={(event) =>
+                  recordRatio(
+                    current.url,
+                    event.currentTarget.naturalWidth,
+                    event.currentTarget.naturalHeight,
+                  )
+                }
+              />
+            </motion.div>
           </AnimatePresence>
         </div>
       </button>

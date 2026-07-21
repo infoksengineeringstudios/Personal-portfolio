@@ -1,7 +1,7 @@
 ---
 title: Podside Meeting Room
-summary: Design-and-build project delivering a modular meeting space through prototyping, fabrication, and construction.
-period: Feb 2025 – Aug 2025
+summary: Design-and-build project delivering a modular meeting space through prototyping, fabrication, and construction. Motorola Grant Winner
+period: August 2024 – June 2025
 featured: true
 cover: Podside.png
 technologies:
@@ -31,3 +31,4 @@ Student-led Monash Sustainable Buildings project to design and build a functiona
 ## Outcome
 
 Delivered a completed meeting space while strengthening skills in fabrication, leadership, and project coordination.
+

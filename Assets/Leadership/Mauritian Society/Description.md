@@ -19,10 +19,11 @@ learnings:
 
 ## Overview
 
-Founded the Monash Mauritian Society to promote Mauritian culture and build community on campus.
+Founded the Monash Mauritian Society to promote Mauritian culture and build community on campus expanding to a Melbourne Mauritian Student Society.
 
 ## Key contributions
 
 - Established the society and led operations as Founder and President.
 - Secured AUD $4,000 in sponsorship from Monash International Student Recruitment.
 - Organised cultural events including a dinner night, BBQs, and community picnics.
+

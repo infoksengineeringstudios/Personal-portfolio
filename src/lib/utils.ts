@@ -15,11 +15,40 @@ export function cn(...classes: Array<string | false | null | undefined>): string
   return classes.filter(Boolean).join(" ");
 }
 
+const MONTH_NAMES: Record<string, string> = {
+  jan: "January",
+  feb: "February",
+  mar: "March",
+  apr: "April",
+  may: "May",
+  jun: "June",
+  jul: "July",
+  aug: "August",
+  sep: "September",
+  sept: "September",
+  oct: "October",
+  nov: "November",
+  dec: "December",
+};
+
+/**
+ * Expand abbreviated month names to their full form, e.g.
+ * "Feb 2027 – Jun 2027" → "February 2027 – June 2027".
+ * Word boundaries mean already-full names (April, July, …) are left untouched.
+ */
+export function expandMonths(value: string): string {
+  return value.replace(
+    /\b(jan|feb|mar|apr|may|jun|jul|aug|sept|sep|oct|nov|dec)\b\.?/gi,
+    (match, abbr: string) => MONTH_NAMES[abbr.toLowerCase()] ?? match,
+  );
+}
+
 export function getExperiencePeriod(item: {
   period?: string;
   year?: string;
 }): string | undefined {
-  return item.period ?? item.year;
+  const raw = item.period ?? item.year;
+  return raw ? expandMonths(raw) : raw;
 }
 
 export function getMimeType(filename: string): string {
