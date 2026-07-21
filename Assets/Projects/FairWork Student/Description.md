@@ -3,7 +3,7 @@ title: FairWork Student
 summary: Full-stack collaboration platform improving fairness and accountability in university group projects.
 organization: FairWork Student
 role: Founder & Lead Developer
-period: Nov 2025– Nov 2026
+period: Nov 2025 – Nov 2026
 featured: true
 technologies:
   - Next.js
@@ -32,4 +32,5 @@ Built a university collaboration platform to improve transparency, workload bala
 ## Outcome
 
 Delivered a scalable platform combining product design, full-stack development, and cloud architecture for project-based learning.
+
 

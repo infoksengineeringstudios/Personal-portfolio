@@ -10,6 +10,7 @@ import type {
   Profile,
 } from "./types";
 import {
+  byMostRecent,
   getMimeType,
   isImageFile,
   isReportFile,
@@ -268,7 +269,9 @@ function loadItem(kind: ContentKind, folderName: string): ContentItem {
 
 export function getItems(kind: ContentKind): ContentItem[] {
   const dir = path.join(ASSETS, KIND_FOLDERS[kind]);
-  return listSubdirs(dir).map((folder) => loadItem(kind, folder));
+  return listSubdirs(dir)
+    .map((folder) => loadItem(kind, folder))
+    .sort(byMostRecent);
 }
 
 export function getItemBySlug(
