@@ -3,7 +3,7 @@ title: Podside Meeting Room
 summary: Design-and-build project delivering a modular meeting space through prototyping, fabrication, and construction. Motorola Grant Winner
 period: August 2024 – June 2025
 featured: true
-cover: Podside.png
+cover: 20250505_123959.jpg
 technologies:
   - CAD
   - Laser cutting
