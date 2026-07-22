@@ -16,7 +16,7 @@ export function ExperienceList({ items, basePath }: ExperienceListProps) {
           <FadeIn delay={Math.min(index * 0.05, 0.2)}>
             <Link
               href={`${basePath}/${item.slug}`}
-              className="group flex flex-col gap-2 py-7 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
+              className="group flex flex-col gap-2 rounded-[var(--radius)] px-4 py-7 transition-colors hover:bg-[var(--accent-soft)] sm:-mx-4 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
             >
               <div>
                 <h3 className="flex items-baseline gap-3 text-xl font-semibold tracking-[-0.03em] text-foreground group-hover:text-accent">
@@ -31,6 +31,23 @@ export function ExperienceList({ items, basePath }: ExperienceListProps) {
                 <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
                   {item.summary}
                 </p>
+                <span className="mt-3 inline-flex items-center gap-1.5 font-mono text-[0.7rem] font-medium uppercase tracking-[0.1em] text-accent">
+                  View details
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    <path
+                      d="M5 12h14m0 0-5-5m5 5-5 5"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
               </div>
               <span className="shrink-0 font-mono text-xs text-subtle sm:text-sm">
                 {getExperiencePeriod(item)}

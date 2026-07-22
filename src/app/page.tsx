@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ExperienceList } from "@/components/ExperienceList";
 import { Hero } from "@/components/Hero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -126,33 +127,7 @@ export default function HomePage() {
             </Link>
           }
         />
-        <ul className="divide-y divide-[var(--border)] border-y border-[var(--border)]">
-          {leadership.map((item, index) => (
-            <FadeIn key={item.slug} delay={Math.min(index * 0.05, 0.2)}>
-              <li>
-                <Link
-                  href={`/leadership/${item.slug}`}
-                  className="group flex flex-col gap-2 py-7 sm:flex-row sm:items-baseline sm:justify-between sm:gap-8"
-                >
-                  <div>
-                    <h3 className="text-xl font-semibold tracking-[-0.03em] text-foreground group-hover:text-accent">
-                      {item.title}
-                    </h3>
-                    <p className="mt-1 text-sm text-muted">
-                      {[item.role, item.organization].filter(Boolean).join(" · ")}
-                    </p>
-                    <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
-                      {item.summary}
-                    </p>
-                  </div>
-                  <span className="shrink-0 font-mono text-xs text-subtle sm:text-sm">
-                    {getExperiencePeriod(item)}
-                  </span>
-                </Link>
-              </li>
-            </FadeIn>
-          ))}
-        </ul>
+        <ExperienceList items={leadership} basePath="/leadership" />
       </section>
 
       <section className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
