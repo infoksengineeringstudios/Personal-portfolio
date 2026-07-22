@@ -10,9 +10,16 @@ interface HeroProps {
   title: string;
   tagline: string;
   resumeUrl?: string;
+  credentials?: string[];
 }
 
-export function Hero({ name, title, tagline, resumeUrl }: HeroProps) {
+export function Hero({
+  name,
+  title,
+  tagline,
+  resumeUrl,
+  credentials = [],
+}: HeroProps) {
   const year = new Date().getFullYear();
 
   return (
@@ -43,6 +50,22 @@ export function Hero({ name, title, tagline, resumeUrl }: HeroProps) {
           <p className="mt-5 max-w-md text-base leading-relaxed text-muted sm:text-lg">
             {tagline}
           </p>
+
+          {credentials.length > 0 ? (
+            <div className="mt-6">
+              <p className="label-mono label-mono--muted">Qualifications</p>
+              <ul className="mt-2.5 flex flex-wrap gap-2">
+                {credentials.map((credential) => (
+                  <li
+                    key={credential}
+                    className="rounded-[6px] border border-[var(--border)] bg-[var(--accent-soft)] px-2.5 py-1 text-[0.8125rem] font-medium text-foreground"
+                  >
+                    {credential}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link href="/projects" className="btn-primary h-12 px-6 text-sm">

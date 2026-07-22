@@ -355,6 +355,7 @@ export function getProfile(): Profile {
     body:
       content.trim() ||
       "Placeholder about section. Edit `Assets/Profile/Description.md` to introduce yourself, your focus areas, and what you are looking for next.",
+    credentials: parseStringList(data.credentials),
     resume,
     documents,
   };

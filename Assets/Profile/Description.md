@@ -7,6 +7,10 @@ email: santchurnkrishiraj@gmail.com
 studentEmail: ksan0037@student.monash.edu
 phone: 0432 399 251
 linkedin: https://www.linkedin.com/in/krishiraj-santchurn
+credentials:
+  - BEng (Hons) Civil Engineering — Monash
+  - CAPM® · Project Management (PMI)
+  - ACCA Advanced Diploma
 ---
 
 Monash civil engineering student with experience across consulting, construction, public infrastructure, and digital project delivery.
