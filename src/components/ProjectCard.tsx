@@ -9,13 +9,15 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
+  const period = getExperiencePeriod(project);
+
   return (
-    <FadeIn delay={Math.min(index * 0.06, 0.24)}>
+    <FadeIn delay={Math.min(index * 0.06, 0.24)} className="h-full">
       <Link
         href={`/projects/${project.slug}`}
-        className="group block focus-visible:rounded-[var(--radius)]"
+        className="group block h-full focus-visible:rounded-[var(--radius)]"
       >
-        <article className="sheet overflow-hidden transition-[transform,box-shadow,border-color] duration-500 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow)]">
+        <article className="sheet flex h-full flex-col overflow-hidden transition-[transform,box-shadow,border-color] duration-500 hover:-translate-y-1 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow)]">
           <div className="relative aspect-[16/10] overflow-hidden border-b border-[var(--border)] bg-[#e9eae8]">
             {/* Drafting-print greyscale — snaps to full colour on hover */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -34,22 +36,22 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
               </span>
             ) : null}
           </div>
-          <div className="p-5 sm:p-6">
-            <div className="flex items-baseline justify-between gap-3">
-              <h3 className="text-lg font-semibold tracking-[-0.02em] text-foreground group-hover:text-accent">
-                {project.title}
-              </h3>
-              {getExperiencePeriod(project) ? (
-                <span className="shrink-0 font-mono text-xs text-subtle">
-                  {getExperiencePeriod(project)}
-                </span>
-              ) : null}
-            </div>
-            <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-muted">
+
+          <div className="flex flex-1 flex-col p-5 sm:p-6">
+            <h3 className="line-clamp-2 min-h-[2.75rem] text-lg font-semibold leading-snug tracking-[-0.02em] text-foreground group-hover:text-accent">
+              {project.title}
+            </h3>
+            {period ? (
+              <p className="mt-1.5 font-mono text-xs text-subtle">{period}</p>
+            ) : null}
+            <p className="mt-2.5 line-clamp-2 text-sm leading-relaxed text-muted">
               {project.summary}
             </p>
             {project.technologies.length > 0 ? (
-              <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Technologies">
+              <ul
+                className="mt-auto flex flex-wrap gap-1.5 pt-5"
+                aria-label="Technologies"
+              >
                 {project.technologies.slice(0, 4).map((tech) => (
                   <li
                     key={tech}
