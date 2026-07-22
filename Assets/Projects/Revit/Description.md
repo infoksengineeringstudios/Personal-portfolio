@@ -1,5 +1,6 @@
 ---
 title: Revit
+discipline: Civil
 summary: Placeholder BIM modelling work focused on coordination, detailing, and documentation quality.
 technologies:
   - Revit

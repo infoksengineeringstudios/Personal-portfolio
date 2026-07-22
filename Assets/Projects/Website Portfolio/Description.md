@@ -1,5 +1,6 @@
 ---
 title: Engineering Portfolio Website
+discipline: Digital
 summary: Designed and built this content-driven portfolio from scratch with Next.js, Tailwind, and Framer Motion, deployed on Vercel.
 period: July 2026 – Present
 featured: true

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectsExplorer } from "@/components/ProjectsExplorer";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MarkdownBody } from "@/components/MarkdownBody";
 import {
@@ -30,11 +30,7 @@ export default function ProjectsPage() {
           <MarkdownBody content={page.body} />
         </div>
       ) : null}
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
-          <ProjectCard key={project.slug} project={project} index={index} />
-        ))}
-      </div>
+      <ProjectsExplorer projects={projects} />
 
       <RoadSectionDrawing className="pointer-events-none mx-auto mt-16 w-full max-w-2xl text-foreground opacity-60" />
     </div>

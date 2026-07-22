@@ -237,6 +237,10 @@ function loadItem(kind: ContentKind, folderName: string): ContentItem {
     role: typeof data.role === "string" ? data.role : undefined,
     organization:
       typeof data.organization === "string" ? data.organization : undefined,
+    discipline:
+      typeof data.discipline === "string" && data.discipline
+        ? data.discipline
+        : undefined,
     featured: Boolean(data.featured),
     cover,
     images:

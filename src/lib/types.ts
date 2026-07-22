@@ -12,6 +12,8 @@ export interface ContentItem {
   period?: string;
   role?: string;
   organization?: string;
+  /** e.g. "Civil", "Digital", "Design & build" — used for filtering/labelling. */
+  discipline?: string;
   featured: boolean;
   cover?: string;
   images: MediaFile[];

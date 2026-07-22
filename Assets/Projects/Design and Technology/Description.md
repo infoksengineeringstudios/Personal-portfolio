@@ -1,5 +1,6 @@
 ---
 title: Rosewood Coffee Table
+discipline: Design & build
 summary: Designed and built a coffee table from 100-year-old reclaimed rosewood for CIE A Levels Design & Technology.
 period: January 2022 – December 2022
 featured: true

@@ -1,5 +1,6 @@
 ---
 title: Rafflesia Vision Valley — Arterial Link Road Design
+discipline: Civil
 summary: Planned and designed two Austroads-compliant arterial link roads for a logistics hub using Civil 3D.
 period: July 2025 – Nov 2025
 featured: true

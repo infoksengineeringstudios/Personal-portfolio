@@ -1,5 +1,6 @@
 ---
 title: FairWork Student
+discipline: Digital
 summary: Full-stack collaboration platform improving fairness and accountability in university group projects.
 organization: FairWork Student
 role: Founder & Lead Developer

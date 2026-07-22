@@ -1,6 +1,6 @@
 ---
 name: Krishiraj Santchurn
-title: Civil Engineering Student
+title: Civil & Digital Engineering Student
 tagline: Commercially aware engineering student combining civil engineering, digital innovation and practical experience to create smarter, more sustainable infrastructure.
 location: Melbourne, Australia
 email: santchurnkrishiraj@gmail.com

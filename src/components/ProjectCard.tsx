@@ -28,6 +28,11 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
             <span className="label-mono absolute left-3 top-3 rounded-[4px] bg-white/90 px-2 py-1 backdrop-blur-sm">
               Fig. {String(index + 1).padStart(2, "0")}
             </span>
+            {project.discipline ? (
+              <span className="absolute right-3 top-3 rounded-[4px] bg-[var(--accent)] px-2 py-1 font-mono text-[0.625rem] font-semibold uppercase tracking-[0.08em] text-white">
+                {project.discipline}
+              </span>
+            ) : null}
           </div>
           <div className="p-5 sm:p-6">
             <div className="flex items-baseline justify-between gap-3">

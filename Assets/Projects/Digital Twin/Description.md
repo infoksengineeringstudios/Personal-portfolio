@@ -1,5 +1,6 @@
 ---
 title: Digital Twin Fire Alarm Verification System
+discipline: Civil
 summary: Research project using Digital Twin data to reduce false fire alarms in institutional buildings.
 period: Feb 2026 – Nov 2026
 featured: true
