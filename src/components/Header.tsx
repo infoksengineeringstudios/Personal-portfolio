@@ -53,7 +53,7 @@ export function Header({ name }: HeaderProps) {
             src="/logo-mark.svg"
             alt=""
             aria-hidden="true"
-            className="h-7 w-auto sm:h-8"
+            className="h-11 w-auto sm:h-12"
           />
           <span className="hidden sm:inline">{name}</span>
           <span className="sm:hidden">{name.split(" ")[0]}</span>
