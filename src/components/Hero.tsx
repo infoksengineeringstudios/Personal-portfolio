@@ -103,8 +103,8 @@ export function Hero({
 
           <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-[var(--border)] pt-5">
             {[
-              ["Discipline", "Civil Eng."],
-              ["Base", "Monash Uni"],
+              ["Discipline", "Civil Engineering"],
+              ["Base", "Monash University"],
               ["Status", "Open to work"],
             ].map(([label, value]) => (
               <div key={label}>
@@ -120,7 +120,7 @@ export function Hero({
         <FadeIn immediate delay={0.12} className="relative z-10">
           <figure className="corner-marks sheet overflow-hidden">
             <div
-              className="relative aspect-[4/5] w-full sm:aspect-[5/4] lg:aspect-[4/5]"
+              className="relative aspect-[2/3] w-full"
               style={{
                 background:
                   "linear-gradient(150deg, #f1f1ef 0%, #e3e4e2 55%, #d1d3d2 100%)",
