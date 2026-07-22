@@ -88,22 +88,41 @@ export default function HomePage() {
           <ul className="space-y-0 divide-y divide-white/10">
             {internships.map((item, index) => (
               <FadeIn key={item.slug} delay={0.05 * index}>
-                <li className="flex items-baseline justify-between gap-6 py-5">
-                  <div>
-                    <Link
-                      href={`/internships/${item.slug}`}
-                      className="flex items-baseline gap-3 text-lg font-semibold tracking-[-0.03em] text-white hover:text-[#ef8f8f]"
-                    >
-                      <span className="font-mono text-sm font-medium text-[#ef8f8f]">
-                        {String(index + 1).padStart(2, "0")}
+                <li>
+                  <Link
+                    href={`/internships/${item.slug}`}
+                    className="group -mx-4 flex items-baseline justify-between gap-6 rounded-[var(--radius)] px-4 py-5 transition-colors hover:bg-white/5"
+                  >
+                    <div>
+                      <div className="flex items-baseline gap-3 text-lg font-semibold tracking-[-0.03em] text-white group-hover:text-[#ef8f8f]">
+                        <span className="font-mono text-sm font-medium text-[#ef8f8f]">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
+                        {item.title}
+                      </div>
+                      <p className="mt-1 text-sm text-[#b9bec7]">{item.role}</p>
+                      <span className="mt-2 inline-flex items-center gap-1.5 font-mono text-[0.7rem] font-medium uppercase tracking-[0.1em] text-[#ef8f8f]">
+                        View details
+                        <svg
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1"
+                        >
+                          <path
+                            d="M5 12h14m0 0-5-5m5 5-5 5"
+                            stroke="currentColor"
+                            strokeWidth="1.8"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
                       </span>
-                      {item.title}
-                    </Link>
-                    <p className="mt-1 text-sm text-[#b9bec7]">{item.role}</p>
-                  </div>
-                  <span className="font-mono text-xs text-[#8b919c] sm:text-sm">
-                    {getExperiencePeriod(item)}
-                  </span>
+                    </div>
+                    <span className="shrink-0 font-mono text-xs text-[#8b919c] sm:text-sm">
+                      {getExperiencePeriod(item)}
+                    </span>
+                  </Link>
                 </li>
               </FadeIn>
             ))}
