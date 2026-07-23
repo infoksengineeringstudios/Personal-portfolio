@@ -12,6 +12,7 @@
     "check:encoding:fix": "node scripts/check-encoding.mjs --fix"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.4.0",
     "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.42.2",
     "gray-matter": "^4.0.3",

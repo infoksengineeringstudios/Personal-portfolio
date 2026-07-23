@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
@@ -90,6 +91,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer name={profile.name} email={profile.email} />
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
