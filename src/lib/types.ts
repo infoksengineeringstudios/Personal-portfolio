@@ -14,6 +14,8 @@ export interface ContentItem {
   organization?: string;
   /** e.g. "Civil", "Digital", "Design & build" — used for filtering/labelling. */
   discipline?: string;
+  /** Optional external URL — a live site or repository for the project. */
+  link?: string;
   featured: boolean;
   cover?: string;
   images: MediaFile[];

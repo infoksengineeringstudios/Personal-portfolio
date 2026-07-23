@@ -241,6 +241,8 @@ function loadItem(kind: ContentKind, folderName: string): ContentItem {
       typeof data.discipline === "string" && data.discipline
         ? data.discipline
         : undefined,
+    link:
+      typeof data.link === "string" && data.link ? data.link : undefined,
     featured: Boolean(data.featured),
     cover,
     images:

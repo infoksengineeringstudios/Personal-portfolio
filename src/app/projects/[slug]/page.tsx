@@ -68,6 +68,30 @@ export default async function ProjectPage({ params }: PageProps) {
           <p className="mt-5 text-lg leading-relaxed text-muted">
             {project.summary}
           </p>
+          {project.link ? (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary mt-6 inline-flex h-11 items-center gap-2 px-5 text-sm"
+            >
+              Visit live site
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="h-4 w-4"
+              >
+                <path
+                  d="M7 17 17 7m0 0H8m9 0v9"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+          ) : null}
         </header>
       </FadeIn>
 
