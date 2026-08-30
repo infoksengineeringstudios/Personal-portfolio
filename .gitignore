@@ -30,6 +30,9 @@
 *.tmp
 Thumbs.db
 
+# local archive (not part of the site)
+/_archive/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
