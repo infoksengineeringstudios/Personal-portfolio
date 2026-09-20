@@ -73,6 +73,12 @@ export function ImageGallery({ images, title, heading = "Gallery" }: ImageGaller
         </button>
       </div>
 
+      {current.name ? (
+        <p className="text-center font-mono text-sm text-muted">
+          {current.name}
+        </p>
+      ) : null}
+
       <ul className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-6">
         {images.map((image, index) => (
           <li key={`${image.url}-${index}`}>
@@ -119,6 +125,11 @@ export function ImageGallery({ images, title, heading = "Gallery" }: ImageGaller
               className="max-h-[88vh] max-w-[min(1100px,94vw)] rounded-2xl object-contain"
               onClick={(event) => event.stopPropagation()}
             />
+            {current.name ? (
+              <p className="pointer-events-none absolute bottom-5 left-1/2 max-w-[90vw] -translate-x-1/2 truncate rounded-full bg-black/55 px-4 py-1.5 font-mono text-sm text-white">
+                {current.name}
+              </p>
+            ) : null}
             <button
               type="button"
               className="absolute right-4 top-4 rounded-full bg-white px-4 py-2 text-sm font-medium text-foreground"
