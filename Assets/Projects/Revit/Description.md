@@ -22,7 +22,7 @@ A growing set of self-directed Revit projects built while learning BIM — cover
 
 ## Apartment building
 
-A multi-unit residential apartment building modelled in Revit — floor-by-floor unit layouts, circulation and a basement car park, with plans (ground, upper floors, NGL) and an elevation produced from the model. My most complete architectural BIM model to date.
+A multi-unit residential apartment building modelled in Revit — floor-by-floor unit layouts, circulation and a car park, with plans, an elevation and a cutaway 3D view produced straight from the model. I also modelled the structure: a steel column-and-beam frame and a structural plan setting out the column grid over the architectural layout. My most complete BIM model to date, covering both architecture and structure.
 
 ## Residential house
 
