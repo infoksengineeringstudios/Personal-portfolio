@@ -77,3 +77,7 @@ body:has(.capmap-page) footer .label-mono{color:#8ea3b3 !important}
 .capmap-page .evidence p{line-height:1.24}
 .capmap-page .lead{height:250px}
 .capmap-page .lead .evidence p{font-size:14px;line-height:1.25;letter-spacing:-.3px}
+
+/* more breathing room under the title */
+.capmap-page .map-title{top:10px}
+.capmap-page .engineer{top:80px}

@@ -15,7 +15,7 @@ const MAP_HTML = `<div class="map-viewport" aria-label="Engineering capability m
       <p class="map-title">ENGINEERING CAPABILITY MAP</p>
       <svg class="connections" viewBox="0 0 1536 1024" aria-hidden="true">
         <g fill="none" stroke-width="2.4">
-          <path class="link engineer-link" d="M768 294V364"/>
+          <path class="link engineer-link" d="M768 318V364"/>
           <path class="link lead-link" d="M541 333Q580 346 606 377"/>
           <path class="link model-link" d="M996 333Q950 344 926 377"/>
           <path class="link optimise-link" d="M623 557L574 623"/>
@@ -26,7 +26,7 @@ const MAP_HTML = `<div class="map-viewport" aria-label="Engineering capability m
           <path class="story-link gold" d="M718 823Q768 839 819 823"/>
           <path class="story-link violet" d="M254 504Q258 581 314 623"/>
         </g>
-        <g class="engineer-dots"><circle cx="768" cy="294" r="5.5"/><circle cx="768" cy="364" r="5.5"/><circle cx="574" cy="623" r="5.5"/></g>
+        <g class="engineer-dots"><circle cx="768" cy="318" r="5.5"/><circle cx="768" cy="364" r="5.5"/><circle cx="574" cy="623" r="5.5"/></g>
         <g class="lead-dots"><circle cx="541" cy="333" r="5.5"/></g>
         <g class="teal-dots"><circle cx="374" cy="245" r="5.5"/><circle cx="528" cy="139" r="5.5"/><circle cx="1006" cy="139" r="5.5"/><circle cx="1157" cy="245" r="5.5"/><circle cx="996" cy="333" r="5.5"/><circle cx="1280" cy="503" r="5.5"/><circle cx="1231" cy="621" r="5.5"/></g>
         <g class="gold-dots"><circle cx="960" cy="623" r="5.5"/><circle cx="718" cy="823" r="5.5"/><circle cx="819" cy="823" r="5.5"/></g>
