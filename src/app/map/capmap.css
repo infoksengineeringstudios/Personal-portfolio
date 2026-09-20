@@ -17,3 +17,13 @@
 .capmap-page .ambient-model{opacity:.32}
 .capmap-page .ambient-construction{opacity:.36}
 .capmap-page .ambient-section{opacity:.17}
+
+/* blend the dark map into the beige site + legible text on the dark ground */
+.capmap-page{padding:60px 0;background:#0e0f12}
+.capmap-page::before{content:"";position:absolute;top:0;left:0;right:0;height:60px;background:linear-gradient(#f5f5f3,#0e0f12);z-index:3;pointer-events:none}
+.capmap-page::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(#0e0f12,#f5f5f3);z-index:3;pointer-events:none}
+.capmap-page .map-title{color:#d7e1e8}
+.capmap-page .story{color:#a3b8c9}
+.capmap-page footer{color:#c6d2dc}
+.capmap-page footer p{color:#d7e1e8}
+.capmap-page footer div{color:#93a7b6}
