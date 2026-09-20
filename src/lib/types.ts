@@ -19,8 +19,16 @@ export interface ContentItem {
   featured: boolean;
   cover?: string;
   images: MediaFile[];
+  /** Gallery sections. One per image subfolder (title = folder name), or a
+   * single untitled group when the project has no subfolders. */
+  galleries: GalleryGroup[];
   reports: MediaFile[];
   folderPath: string;
+}
+
+export interface GalleryGroup {
+  title: string;
+  images: MediaFile[];
 }
 
 export interface MediaFile {

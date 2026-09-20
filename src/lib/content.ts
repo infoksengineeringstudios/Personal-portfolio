@@ -5,6 +5,7 @@ import type {
   Certification,
   ContentItem,
   ContentKind,
+  GalleryGroup,
   MediaFile,
   PageContent,
   Profile,
@@ -86,54 +87,98 @@ function listSubdirs(dir: string): string[] {
     .sort((a, b) => a.localeCompare(b));
 }
 
-function mediaUrl(kind: ContentKind, folder: string, filename: string): string {
-  const kindFolder = KIND_FOLDERS[kind];
-  return `/media/${encodeURIComponent(kindFolder)}/${encodeURIComponent(folder)}/${encodeURIComponent(filename)}`;
+function mediaUrl(kind: ContentKind, ...parts: string[]): string {
+  const segments = [KIND_FOLDERS[kind], ...parts.flatMap((p) => p.split("/"))];
+  return `/media/${segments.map((s) => encodeURIComponent(s)).join("/")}`;
 }
 
 function profileMediaUrl(filename: string): string {
   return `/media/Profile/${encodeURIComponent(filename)}`;
 }
 
+function toMedia(kind: ContentKind, urlParts: string[], filename: string): MediaFile {
+  return {
+    name: filename
+      .replace(/\.[^.]+$/, "")
+      .replace(/^WhatsApp Image\s+/i, "Photo ")
+      .replace(/^IMG-\d{8}-WA/i, "Photo ")
+      .replace(/^IMG[-_]?/i, "Photo ")
+      .replace(/[-_]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim(),
+    filename,
+    url: mediaUrl(kind, ...urlParts, filename),
+    mimeType: getMimeType(filename),
+  };
+}
+
+/** Order gallery groups: concept-style first, detailed-style last, else alpha. */
+function galleryRank(title: string): number {
+  const t = title.toLowerCase();
+  if (/concept|overview|schematic|preliminary/.test(t)) return 0;
+  if (/detail|documentation|construction|analysis|final/.test(t)) return 2;
+  return 1;
+}
+
 function collectMedia(
   kind: ContentKind,
   folderName: string,
   folderPath: string,
-): { images: MediaFile[]; reports: MediaFile[] } {
+): { images: MediaFile[]; reports: MediaFile[]; galleries: GalleryGroup[] } {
   if (!fs.existsSync(folderPath)) {
-    return { images: [], reports: [] };
+    return { images: [], reports: [], galleries: [] };
   }
 
-  const files = fs
-    .readdirSync(folderPath, { withFileTypes: true })
-    .filter((entry) => entry.isFile())
-    .map((entry) => entry.name)
+  const entries = fs.readdirSync(folderPath, { withFileTypes: true });
+  const rootFiles = entries
+    .filter((e) => e.isFile())
+    .map((e) => e.name)
     .filter((name) => !/^description\.md$/i.test(name))
     .sort((a, b) => a.localeCompare(b));
 
-  const images: MediaFile[] = [];
+  const rootImages: MediaFile[] = [];
   const reports: MediaFile[] = [];
-
-  for (const filename of files) {
-    const media: MediaFile = {
-      name: filename
-        .replace(/\.[^.]+$/, "")
-        .replace(/^WhatsApp Image\s+/i, "Photo ")
-        .replace(/^IMG-\d{8}-WA/i, "Photo ")
-        .replace(/^IMG-/i, "Photo ")
-        .replace(/[-_]+/g, " ")
-        .replace(/\s+/g, " ")
-        .trim(),
-      filename,
-      url: mediaUrl(kind, folderName, filename),
-      mimeType: getMimeType(filename),
-    };
-
-    if (isImageFile(filename)) images.push(media);
+  for (const filename of rootFiles) {
+    const media = toMedia(kind, [folderName], filename);
+    if (isImageFile(filename)) rootImages.push(media);
     else if (isReportFile(filename)) reports.push(media);
   }
 
-  return { images, reports };
+  // Each immediate subfolder becomes a titled gallery group.
+  const subdirs = entries
+    .filter((e) => e.isDirectory())
+    .map((e) => e.name)
+    .sort((a, b) => a.localeCompare(b));
+
+  const subGroups: GalleryGroup[] = [];
+  const subImages: MediaFile[] = [];
+  for (const sub of subdirs) {
+    const subImgs = fs
+      .readdirSync(path.join(folderPath, sub), { withFileTypes: true })
+      .filter((e) => e.isFile() && isImageFile(e.name))
+      .map((e) => e.name)
+      .sort((a, b) => a.localeCompare(b))
+      .map((filename) => toMedia(kind, [folderName, sub], filename));
+    if (subImgs.length > 0) {
+      subGroups.push({ title: sub, images: subImgs });
+      subImages.push(...subImgs);
+    }
+  }
+  subGroups.sort(
+    (a, b) => galleryRank(a.title) - galleryRank(b.title) || a.title.localeCompare(b.title),
+  );
+
+  let galleries: GalleryGroup[];
+  if (subGroups.length > 0) {
+    galleries =
+      rootImages.length > 0
+        ? [{ title: "Overview", images: rootImages }, ...subGroups]
+        : subGroups;
+  } else {
+    galleries = rootImages.length > 0 ? [{ title: "", images: rootImages }] : [];
+  }
+
+  return { images: [...rootImages, ...subImages], reports, galleries };
 }
 
 function firstParagraph(markdown: string): string {
@@ -175,7 +220,7 @@ function loadItem(kind: ContentKind, folderName: string): ContentItem {
   const descriptionPath = path.join(folderPath, "Description.md");
   const raw = readFileSafe(descriptionPath);
   const { data, content } = matter(raw || "---\n---\n");
-  const { images, reports } = collectMedia(kind, folderName, folderPath);
+  const { images, reports, galleries } = collectMedia(kind, folderName, folderPath);
   const slug = slugify(typeof data.slug === "string" ? data.slug : folderName);
   const coverFromFrontmatter =
     typeof data.cover === "string" && data.cover
@@ -211,6 +256,28 @@ function loadItem(kind: ContentKind, folderName: string): ContentItem {
     }
   }
 
+  const placeholderImages: MediaFile[] = [
+    {
+      name: "Placeholder gallery image",
+      filename: "placeholder.svg",
+      url: cover,
+      mimeType: "image/svg+xml",
+    },
+    {
+      name: "Placeholder detail",
+      filename: "placeholder-2.svg",
+      url:
+        PLACEHOLDER_COVERS[
+          (PLACEHOLDER_COVERS.indexOf(cover) + 1) % PLACEHOLDER_COVERS.length
+        ] ?? PLACEHOLDER_COVERS[0],
+      mimeType: "image/svg+xml",
+    },
+  ];
+  const usePlaceholder = images.length === 0 && kind === "projects";
+  const finalGalleries: GalleryGroup[] = usePlaceholder
+    ? [{ title: "", images: placeholderImages }]
+    : galleries;
+
   return {
     slug,
     kind,
@@ -245,29 +312,8 @@ function loadItem(kind: ContentKind, folderName: string): ContentItem {
       typeof data.link === "string" && data.link ? data.link : undefined,
     featured: Boolean(data.featured),
     cover,
-    images:
-      orderedImages.length > 0
-        ? orderedImages
-        : kind === "projects"
-          ? [
-              {
-                name: "Placeholder gallery image",
-                filename: "placeholder.svg",
-                url: cover,
-                mimeType: "image/svg+xml",
-              },
-              {
-                name: "Placeholder detail",
-                filename: "placeholder-2.svg",
-                url:
-                  PLACEHOLDER_COVERS[
-                    (PLACEHOLDER_COVERS.indexOf(cover) + 1) %
-                      PLACEHOLDER_COVERS.length
-                  ] ?? PLACEHOLDER_COVERS[0],
-                mimeType: "image/svg+xml",
-              },
-            ]
-          : [],
+    images: usePlaceholder ? placeholderImages : orderedImages,
+    galleries: finalGalleries,
     reports,
     folderPath,
   };

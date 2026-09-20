@@ -1,6 +1,6 @@
 ---
 title: Monash Mauritian Society
-summary: Founded and led a cultural student society, securing sponsorship and delivering community events on campus.
+summary: Founded and led a cultural student society, securing sponsorship and growing it into a Melbourne-wide Mauritian student community across six universities.
 organization: Monash Mauritian Society
 role: Founder & President
 period: Nov 2024 – Present
@@ -14,16 +14,16 @@ technologies:
 learnings:
   - Built a new student society from founding through ongoing event delivery.
   - Secured sponsorship and managed stakeholder relationships across campus.
-  - Led event planning, budgeting, and community engagement.
+  - Scaled community events beyond one campus to a Melbourne-wide student network.
 ---
 
 ## Overview
 
-Founded the Monash Mauritian Society to promote Mauritian culture and build community on campus expanding to a Melbourne Mauritian Student Society.
+Founded the Monash Mauritian Society to promote Mauritian culture and build community on campus — and grew it beyond Monash into a Melbourne-wide Mauritian student community.
 
 ## Key contributions
 
 - Established the society and led operations as Founder and President.
 - Secured AUD $4,000 in sponsorship from Monash International Student Recruitment.
-- Organised cultural events including a dinner night, BBQs, and community picnics.
-
+- Organised a Melbourne-wide Mauritian community event bringing together students from Monash, Deakin, La Trobe, Melbourne, RMIT and Swinburne.
+- Ran cultural events including a dinner night, BBQs, and community picnics.

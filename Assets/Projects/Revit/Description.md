@@ -1,33 +1,33 @@
 ---
 title: BIM Modelling in Revit
 discipline: Civil
-summary: Two self-directed Revit models — a two-storey residential BIM model and a structural frame with its analytical model — built to learn BIM across architecture and structure.
+summary: Self-directed Revit work spanning architecture and structure — a multi-unit apartment building, a two-storey house, and a structural frame with its analytical model.
 period: August 2026
 featured: false
-cover: Architectural drawing of a simple house.png
+cover: Apartment building/Revit Model 2.png
 technologies:
   - Revit
   - Revit Structure
   - BIM
   - Structural analysis
 learnings:
-  - Modelled both architectural and structural systems in Revit.
-  - Set out levels, framing, a core wall, and foundations.
-  - Generated and reviewed an analytical model for structural analysis.
+  - Modelled architectural and structural systems across multiple projects.
+  - Produced coordinated plans, elevations, and 3D views from BIM models.
+  - Set out framing, a core wall and foundations, and generated an analytical model.
 ---
 
 ## Overview
 
-Two small, self-directed Revit projects built while learning BIM — one architectural, one structural — covering modelling, coordination, and analysis setup.
+A growing set of self-directed Revit projects built while learning BIM — covering architectural modelling, documentation, and structural framing. Each model below is a separate exercise, shown in its own gallery.
 
-## Model 1 — Residential BIM Model
+## Apartment building
 
-A compact two-storey house modelled from the ground up: slab, walls, a gable roof with a fully glazed gable end, a first-floor balcony, and mixed cladding. Built using levels, walls, floors, roofs, doors, and windows, with materials applied and a shaded 3D presentation view.
+A multi-unit residential apartment building modelled in Revit — floor-by-floor unit layouts, circulation and a basement car park, with plans (ground, upper floors, NGL) and an elevation produced from the model. My most complete architectural BIM model to date.
 
-## Model 2 — Structural Frame & Analysis
+## Residential house
 
-A three-level structural frame (FFL 0.000 / 3.600 / 7.000) with columns, a primary and secondary beam layout, a central core wall, and pad footings — plus the analytical model used for analysis. The last two images show the physical frame and its analytical representation.
+A compact two-storey house: slab, walls, a gable roof with a fully glazed gable end, a balcony and mixed cladding — built from levels, walls, floors, roofs and openings with materials and a shaded 3D view.
 
-## Outcome
+## Structural frame & analysis
 
-Together these consolidated the core Revit workflow across both disciplines — architectural modelling and structural framing — through to generating an analytical model ready for analysis.
+A three-level structural frame (columns, primary and secondary beams, a central core wall and pad footings) plus the analytical model used for analysis.

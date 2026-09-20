@@ -8,9 +8,11 @@ import { cn } from "@/lib/utils";
 interface ImageGalleryProps {
   images: MediaFile[];
   title: string;
+  /** Section heading shown above the gallery (defaults to "Gallery"). */
+  heading?: string;
 }
 
-export function ImageGallery({ images, title }: ImageGalleryProps) {
+export function ImageGallery({ images, title, heading = "Gallery" }: ImageGalleryProps) {
   const [active, setActive] = useState(0);
   const [lightbox, setLightbox] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -39,7 +41,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
     <section aria-labelledby={labelId} className="space-y-4">
       <div className="flex items-end justify-between gap-4">
         <h2 id={labelId} className="text-xl font-semibold tracking-[-0.03em]">
-          Gallery
+          {heading}
         </h2>
         <p className="font-mono text-sm text-subtle">
           {String(active + 1).padStart(2, "0")} /{" "}

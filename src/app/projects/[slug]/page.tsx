@@ -95,8 +95,15 @@ export default async function ProjectPage({ params }: PageProps) {
         </header>
       </FadeIn>
 
-      <div className="mt-12">
-        <ImageGallery images={project.images} title={project.title} />
+      <div className="mt-12 space-y-14">
+        {project.galleries.map((group, i) => (
+          <ImageGallery
+            key={group.title || `gallery-${i}`}
+            images={group.images}
+            title={group.title || project.title}
+            heading={group.title || "Gallery"}
+          />
+        ))}
       </div>
 
       <div className="mt-14 grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
