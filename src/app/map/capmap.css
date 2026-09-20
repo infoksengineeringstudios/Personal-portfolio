@@ -48,3 +48,24 @@ body:has(.capmap-page) footer .bg-white{background:#15171b !important}
 body:has(.capmap-page) footer .text-foreground{color:#eef2f5 !important}
 body:has(.capmap-page) footer .text-muted,body:has(.capmap-page) footer .text-subtle{color:#9fb2bf !important}
 body:has(.capmap-page) footer .label-mono{color:#8ea3b3 !important}
+
+/* ===== red-accent brand palette (unify the five cards) ===== */
+.capmap-page .engineer,.capmap-page .model,.capmap-page .build,.capmap-page .optimise,.capmap-page .lead{
+  --accent:#c92f2f;
+  --surface:linear-gradient(120deg,#f6f2ec,#efe8de);
+}
+/* connectors + dots -> brand red */
+.capmap-page .connections .link,.capmap-page .connections .story-link{stroke:#c92f2f}
+.capmap-page .engineer-dots,.capmap-page .lead-dots,.capmap-page .teal-dots,.capmap-page .gold-dots,.capmap-page .violet-dots{fill:#c92f2f}
+/* central node -> brand ink + red accent */
+.capmap-page .identity{background:linear-gradient(125deg,#191b20,#101216);border-color:#4a2626;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 6px 16px rgba(0,0,0,.55)}
+.capmap-page .identity>p{color:#cdd7de}
+.capmap-page .identity-rule{background:#c92f2f}
+.capmap-page .identity .motto{color:#e2694b}
+.capmap-page .identity .motto span{color:#c92f2f}
+
+/* ===== card spacing ===== */
+.capmap-page .capability{padding:18px 22px 16px}
+.capmap-page .flow{margin-bottom:9px;padding:8px 0 9px}
+.capmap-page .evidence h3{margin-bottom:4px}
+.capmap-page .evidence p{line-height:1.34}

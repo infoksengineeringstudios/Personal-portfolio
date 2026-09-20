@@ -99,11 +99,16 @@ export function MapClient() {
     const fit = () => {
       if (window.matchMedia("(max-width: 799px)").matches) {
         map.style.removeProperty("transform");
+        map.style.removeProperty("transform-origin");
         viewport.style.removeProperty("height");
         return;
       }
-      const scale = viewport.clientWidth / 1536;
-      map.style.transform = `scale(${scale})`;
+      const availW = viewport.clientWidth;
+      const availH = window.innerHeight - 96; // room for the sticky header
+      const scale = Math.min(availW / 1536, availH / 1024);
+      const offX = Math.max(0, (availW - 1536 * scale) / 2); // centre when height-limited
+      map.style.transformOrigin = "top left";
+      map.style.transform = `translateX(${offX}px) scale(${scale})`;
       viewport.style.height = `${1024 * scale}px`;
     };
     fit();
@@ -111,12 +116,11 @@ export function MapClient() {
     if (typeof ResizeObserver !== "undefined") {
       ro = new ResizeObserver(fit);
       ro.observe(viewport);
-    } else {
-      window.addEventListener("resize", fit, { passive: true });
     }
+    window.addEventListener("resize", fit, { passive: true });
     return () => {
       if (ro) ro.disconnect();
-      else window.removeEventListener("resize", fit);
+      window.removeEventListener("resize", fit);
     };
   }, []);
   return (
