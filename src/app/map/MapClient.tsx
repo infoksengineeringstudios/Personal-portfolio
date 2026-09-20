@@ -5,6 +5,13 @@ import "./capmap.css";
 
 const MAP_HTML = `<div class="map-viewport" aria-label="Engineering capability map">
     <div class="map">
+      <div class="blueprint-landscape" aria-hidden="true">
+        <span class="ambient-sketch ambient-bridge"></span>
+        <span class="ambient-sketch ambient-frame"></span>
+        <span class="ambient-sketch ambient-model"></span>
+        <span class="ambient-sketch ambient-construction"></span>
+        <span class="ambient-sketch ambient-section"></span>
+      </div>
       <p class="map-title">ENGINEERING CAPABILITY MAP</p>
       <svg class="connections" viewBox="0 0 1536 1024" aria-hidden="true">
         <g fill="none" stroke-width="2.4">
