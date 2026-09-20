@@ -69,3 +69,11 @@ body:has(.capmap-page) footer .label-mono{color:#8ea3b3 !important}
 .capmap-page .flow{margin-bottom:9px;padding:8px 0 9px}
 .capmap-page .evidence h3{margin-bottom:4px}
 .capmap-page .evidence p{line-height:1.34}
+
+/* ===== balance central node + stop card text overflow ===== */
+.capmap-page .identity{display:flex;flex-direction:column;justify-content:center;padding:22px 16px}
+.capmap-page .identity-rule{margin:14px auto}
+.capmap-page .capability{padding:16px 22px 14px}
+.capmap-page .evidence p{line-height:1.24}
+.capmap-page .lead{height:250px}
+.capmap-page .lead .evidence p{font-size:14px;line-height:1.25;letter-spacing:-.3px}
