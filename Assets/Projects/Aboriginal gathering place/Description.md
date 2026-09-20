@@ -3,7 +3,7 @@ title: Aboriginal Gathering Place
 discipline: Civil
 role: Structural Engineer
 summary: Fourth-year civil capstone — the structural design of a community gathering place, from concept comparison (RC vs steel) through to detailed modelling and analysis in Revit and SpaceGass. Ongoing.
-period: 2026 – Present
+period: July 2026 – November 2026
 featured: true
 cover: Concept design/Aerial view.png
 technologies:

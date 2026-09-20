@@ -2,7 +2,7 @@
 title: BIM Modelling in Revit
 discipline: Civil
 summary: Self-directed Revit work spanning architecture and structure — a multi-unit apartment building, a two-storey house, and a structural frame with its analytical model.
-period: August 2026
+period: August 2026 – September 2026
 featured: false
 cover: Apartment building/Revit Model 2.png
 technologies:
