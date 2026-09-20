@@ -27,3 +27,24 @@
 .capmap-page footer{color:#c6d2dc}
 .capmap-page footer p{color:#d7e1e8}
 .capmap-page footer div{color:#93a7b6}
+
+/* ===== /map: one uniform black background across the whole page (no fades) ===== */
+.capmap-page::before,.capmap-page::after{display:none}
+.capmap-page{padding:0;background:#0e0f12}
+.capmap-page .map{background:#0e0f12}
+body:has(.capmap-page){background:#0e0f12}
+
+/* dark site header on the map page */
+body:has(.capmap-page) header{background:#0e0f12 !important;border-bottom-color:rgba(255,255,255,.10) !important}
+body:has(.capmap-page) header .text-foreground{color:#eef2f5 !important}
+body:has(.capmap-page) header nav a:not(.btn-primary){color:#c7d2da !important}
+body:has(.capmap-page) header .bg-foreground{background:#eef2f5 !important}
+body:has(.capmap-page) header button{background:rgba(255,255,255,.08) !important;border-color:rgba(255,255,255,.22) !important}
+body:has(.capmap-page) header img{filter:brightness(0) invert(1)}
+
+/* dark site footer on the map page */
+body:has(.capmap-page) footer{background:#0e0f12 !important;border-top-color:rgba(255,255,255,.12) !important}
+body:has(.capmap-page) footer .bg-white{background:#15171b !important}
+body:has(.capmap-page) footer .text-foreground{color:#eef2f5 !important}
+body:has(.capmap-page) footer .text-muted,body:has(.capmap-page) footer .text-subtle{color:#9fb2bf !important}
+body:has(.capmap-page) footer .label-mono{color:#8ea3b3 !important}
