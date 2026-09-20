@@ -1,7 +1,7 @@
 ---
 name: Krishiraj Santchurn
 title: Civil Engineering Student
-tagline: Commercially aware engineering student combining civil engineering, digital innovation and practical experience to create smarter, more sustainable infrastructure.
+tagline: Civil and structural engineering, digital delivery, and commercial awareness — brought together to take infrastructure from concept and design through to site.
 location: Melbourne, Australia
 email: santchurnkrishiraj@gmail.com
 studentEmail: ksan0037@student.monash.edu
@@ -14,9 +14,9 @@ credentials:
   - CPCWHS1001 · White Card
 ---
 
-Monash civil engineering student with experience across consulting, construction, public infrastructure, and digital project delivery.
+I'm a civil engineering (Honours) student at Monash who works at an intersection few engineers occupy: core structural and infrastructure engineering, genuine digital fluency — BIM, Civil 3D, digital twins and coding — and a formal commercial grounding from an accounting background.
 
-I have worked on structural documentation, site supervision, road design, sustainable building projects, and software development — alongside leadership roles in ambassador programs, student societies, and technical teams.
+That mix lets me see a project end to end: the structural design, the documentation and site delivery, the digital tools that make the work faster and clearer, and the cost and delivery picture around it. I've applied it across structural consulting, government infrastructure and large-scale (~1000-unit) construction — alongside founding and leading student teams.
 
 ## Credentials
 

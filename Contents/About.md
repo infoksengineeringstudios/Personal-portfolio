@@ -1,11 +1,11 @@
 ---
 title: About
-intro: A civil engineer at heart — I bring digital tools like Civil 3D, BIM, and code to real infrastructure projects.
+intro: A civil engineer at heart — with a digital toolkit and a commercial eye, I take infrastructure from structural design through to site.
 ---
 
-I am a civil engineering student who applies digital tools to core engineering work. My foundation is civil — structural documentation, road design, site supervision, and public infrastructure — and I use BIM, Civil 3D, digital-twin methods, and software to do that work better.
+My foundation is civil and structural — structural design and documentation, road design, site supervision, and public infrastructure. On top of that I bring two things engineers don't usually pair with it: real digital fluency (BIM, Civil 3D, digital-twin methods and software I've built myself) and a formal commercial grounding from an accounting background.
 
-My work spans consulting documentation, construction supervision, public infrastructure inspections, sustainable design-and-build, and software development. Alongside technical delivery, I have represented Monash University, mentored students, and led student initiatives.
+Together they let me see the whole picture — how a design gets documented, delivered on site, sped up with the right tools, and paid for. My experience spans structural consulting, government infrastructure, large-scale construction, sustainable design-and-build, and software development. Alongside the technical work, I've founded and led student societies, represented Monash University, and mentored students.
 
-I am interested in roles where technical rigour, communication, and practical delivery come together.
+I'm interested in roles where technical rigour, digital delivery, and commercial awareness come together.
 
