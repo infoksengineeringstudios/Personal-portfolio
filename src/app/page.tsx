@@ -10,6 +10,7 @@ import {
   CraneDrawing,
 } from "@/components/TechDrawings";
 import {
+  getAllProjects,
   getFeaturedProjects,
   getItems,
   getPageContent,
@@ -20,6 +21,8 @@ import { getExperiencePeriod } from "@/lib/utils";
 export default function HomePage() {
   const profile = getProfile();
   const featured = getFeaturedProjects();
+  const totalProjects = getAllProjects().length;
+  const moreProjects = totalProjects - featured.length;
   const internships = getItems("internships").slice(0, 3);
   const leadership = getItems("leadership");
   const projectsIntro = getPageContent("Projects");
@@ -50,7 +53,7 @@ export default function HomePage() {
               href="/projects"
               className="font-mono text-sm font-medium text-accent hover:underline"
             >
-              All projects →
+              All {totalProjects} projects →
             </Link>
           }
         />
@@ -58,6 +61,35 @@ export default function HomePage() {
           {featured.map((project, index) => (
             <ProjectCard key={project.slug} project={project} index={index} />
           ))}
+          {moreProjects > 0 ? (
+            <FadeIn
+              delay={Math.min(featured.length * 0.06, 0.24)}
+              className="h-full"
+            >
+              <Link
+                href="/projects"
+                className="group block h-full focus-visible:rounded-[var(--radius)]"
+                aria-label={`View all ${totalProjects} projects`}
+              >
+                <article className="sheet flex h-full min-h-[280px] flex-col items-center justify-center gap-3 border-dashed p-8 text-center transition-[transform,box-shadow,border-color] duration-500 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-[var(--shadow)]">
+                  <span className="label-mono text-subtle">
+                    Fig. {String(featured.length + 1).padStart(2, "0")}+
+                  </span>
+                  <p className="text-2xl font-semibold tracking-[-0.02em] text-foreground group-hover:text-accent">
+                    +{moreProjects} more{" "}
+                    {moreProjects === 1 ? "project" : "projects"}
+                  </p>
+                  <p className="max-w-[22ch] text-sm leading-relaxed text-muted">
+                    More civil and digital work, including BIM modelling in
+                    Revit.
+                  </p>
+                  <span className="mt-1 font-mono text-sm font-medium text-accent">
+                    View all {totalProjects} →
+                  </span>
+                </article>
+              </Link>
+            </FadeIn>
+          ) : null}
         </div>
       </section>
 
