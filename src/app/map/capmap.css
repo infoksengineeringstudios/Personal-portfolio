@@ -81,3 +81,12 @@ body:has(.capmap-page) footer .label-mono{color:#8ea3b3 !important}
 /* more breathing room under the title */
 .capmap-page .map-title{top:10px}
 .capmap-page .engineer{top:80px}
+
+/* ===== mobile: cancel desktop-only overrides that broke the stacked layout ===== */
+@media(max-width:799px){
+  .capmap-page .engineer{top:auto}
+  .capmap-page .lead{height:auto}
+  .capmap-page .capability{height:auto;padding:20px}
+  .capmap-page .identity>p{white-space:normal;font-size:19px;letter-spacing:0}
+  .capmap-page .evidence p,.capmap-page .lead .evidence p{font-size:16px;line-height:1.4;letter-spacing:0}
+}
