@@ -7,7 +7,9 @@ import { getItems, getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Internships",
-  description: "Industry experience generated from Assets/Internships.",
+  description:
+    "Industry experience across structural consulting, construction and public infrastructure.",
+  alternates: { canonical: "/internships" },
 };
 
 export default function InternshipsPage() {

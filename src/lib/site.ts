@@ -1,20 +1,19 @@
 /**
  * Canonical site origin, resolved in this order:
- *   1. NEXT_PUBLIC_SITE_URL  — set this in Vercel/prod to your final domain
- *   2. VERCEL_URL            — auto-provided on Vercel deployments (preview/prod)
- *   3. http://localhost:3000 — local development fallback
+ *   1. NEXT_PUBLIC_SITE_URL   — override if the final domain ever changes
+ *   2. https://www.ksantchurn.com — the production canonical origin (default)
  *
- * Used by metadataBase, sitemap.ts, and robots.ts so OpenGraph/canonical
- * URLs point at the real domain instead of localhost.
+ * We deliberately do NOT fall back to VERCEL_URL: canonical, og:url and
+ * og:image must always point at the real domain, never at a per-deployment
+ * *.vercel.app preview URL. Used by metadataBase, sitemap.ts and robots.ts.
  */
+const PRODUCTION_ORIGIN = "https://www.ksantchurn.com";
+
 export function getSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/$/, "");
 
-  const vercel = process.env.VERCEL_URL;
-  if (vercel) return `https://${vercel.replace(/\/$/, "")}`;
-
-  return "http://localhost:3000";
+  return PRODUCTION_ORIGIN;
 }
 
 export const SITE_URL = getSiteUrl();

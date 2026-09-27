@@ -58,7 +58,7 @@ const MAP_HTML = `<div class="map-viewport" aria-label="Engineering capability m
         <div class="illustration build-art" aria-hidden="true"></div>
         <div class="card-heading"><span class="number">03</span><div><h2 id="build-title">BUILD</h2><p>Construction</p></div></div>
         <p class="flow">Design → Documentation → Site → Delivery</p>
-        <div class="evidence"><h3>Key Experience</h3><p><a href="/internships/taylemay-group">Taylemay</a> • <a href="/internships/ministry-of-national-infrastructure">Ministry of National Infrastructure</a><br>~1,000-unit development<br>Site coordination • Quality &amp; safety • Sequencing</p></div>
+        <div class="evidence"><h3>Key Experience</h3><p><a href="/internships/tayelamay-group">Tayelamay</a> • <a href="/internships/ministry-of-national-infrastructure">Ministry of National Infrastructure</a><br>~1,000-unit development<br>Site coordination • Quality &amp; safety • Sequencing</p></div>
       </section>
 
       <section class="capability optimise" aria-labelledby="optimise-title">

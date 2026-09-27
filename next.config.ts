@@ -9,6 +9,15 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     "/media/[...path]": ["./Assets/**/*"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/internships/taylemay-group",
+        destination: "/internships/tayelamay-group",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

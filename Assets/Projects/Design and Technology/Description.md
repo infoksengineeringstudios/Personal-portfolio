@@ -9,7 +9,6 @@ technologies:
   - AutoCAD
   - Sketch Up
   - Photoshop
-  - word
   - Sustainable design
   - Fabrication
 learnings:

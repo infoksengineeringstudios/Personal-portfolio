@@ -1,7 +1,7 @@
 ---
-title: Taylemay Group
+title: Tayelamay Group
 summary: Site engineering internship on a 1,000-unit affordable housing development with hands-on construction exposure.
-organization: Taylemay Group
+organization: Tayelamay Group
 role: Site Engineer Intern
 period: Nov 2023 – Feb 2024
 featured: true

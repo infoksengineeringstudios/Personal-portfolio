@@ -10,7 +10,9 @@ import { getAllProjects, getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "Selected engineering projects generated from Assets/Projects.",
+  description:
+    "Civil, structural and digital engineering projects by Krishiraj Santchurn.",
+  alternates: { canonical: "/projects" },
 };
 
 export default function ProjectsPage() {

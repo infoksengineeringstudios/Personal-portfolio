@@ -18,7 +18,7 @@ learnings:
 
 ## Overview
 
-Designed two arterial link roads connecting a logistics hub to Elmina Road and Airiza Road, with a 30-year design life and Austroads compliance as part of Road Engineering Unit.
+Designed two arterial link roads connecting a logistics hub to Elmina Road and Airiza Road, with a 30-year design life and Austroads compliance as part of CIV3283 Road Engineering at Monash.
 
 ## Key contributions
 

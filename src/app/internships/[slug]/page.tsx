@@ -29,7 +29,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const item = getItemBySlug(KIND, slug);
   if (!item) return { title: LABEL };
-  return { title: item.title, description: item.summary };
+  return {
+    title: item.title,
+    description: item.summary,
+    alternates: { canonical: `${BASE}/${item.slug}` },
+  };
 }
 
 export default async function InternshipDetailPage({ params }: PageProps) {
@@ -75,10 +79,7 @@ export default async function InternshipDetailPage({ params }: PageProps) {
 
       <div className="mt-14 grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <div className="space-y-12">
-          <section aria-labelledby="overview-heading">
-            <h2 id="overview-heading" className="sr-only">
-              Overview
-            </h2>
+          <section aria-label="Overview">
             <MarkdownBody content={item.body} />
           </section>
           {item.learnings.length > 0 ? (

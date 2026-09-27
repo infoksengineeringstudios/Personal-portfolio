@@ -8,6 +8,7 @@ import { getItems, getPageContent } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Leadership",
   description: "Leadership, mentoring, and ambassador roles at Monash University.",
+  alternates: { canonical: "/leadership" },
 };
 
 export default function LeadershipPage() {

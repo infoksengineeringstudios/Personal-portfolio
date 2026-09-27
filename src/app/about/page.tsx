@@ -11,6 +11,7 @@ import { getCertifications, getPageContent, getProfile } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About",
   description: "Background, focus areas, and contact.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

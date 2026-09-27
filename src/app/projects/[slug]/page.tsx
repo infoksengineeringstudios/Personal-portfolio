@@ -27,6 +27,7 @@ export async function generateMetadata({
   return {
     title: project.title,
     description: project.summary,
+    alternates: { canonical: `/projects/${project.slug}` },
   };
 }
 
@@ -54,12 +55,6 @@ export default async function ProjectPage({ params }: PageProps) {
           <div className="flex flex-wrap items-center gap-3 text-sm text-subtle">
             {getExperiencePeriod(project) ? (
               <span>{getExperiencePeriod(project)}</span>
-            ) : null}
-            {project.featured ? (
-              <>
-                <span aria-hidden="true">·</span>
-                <span>Featured</span>
-              </>
             ) : null}
           </div>
           <h1 className="mt-3 text-4xl font-semibold tracking-[-0.045em] text-foreground sm:text-5xl">
@@ -108,16 +103,8 @@ export default async function ProjectPage({ params }: PageProps) {
 
       <div className="mt-14 grid gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
         <div className="space-y-12">
-          <section aria-labelledby="summary-heading">
-            <h2
-              id="summary-heading"
-              className="text-xl font-semibold tracking-[-0.03em]"
-            >
-              Summary
-            </h2>
-            <div className="mt-4">
-              <MarkdownBody content={project.body} />
-            </div>
+          <section aria-label="Overview">
+            <MarkdownBody content={project.body} />
           </section>
           <KeyLearnings learnings={project.learnings} />
         </div>

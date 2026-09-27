@@ -1,6 +1,6 @@
 ---
 title: Lux Consult
-summary: Structural design internship producing AutoCAD drawings and documentation for residential and commercial projects.
+summary: Structural design internship producing reinforced-concrete calculations and AutoCAD documentation, mainly for residential projects.
 organization: Lux Consult
 role: Structural Intern
 period: Dec 2025 – Jan 2026
@@ -19,7 +19,7 @@ learnings:
 
 ## Overview
 
-Structural internship supporting residential and commercial design work, including villas, extensions, and renovations.
+Structural internship supporting mainly residential design work, including villas, extensions and renovations.
 
 ## Key contributions
 

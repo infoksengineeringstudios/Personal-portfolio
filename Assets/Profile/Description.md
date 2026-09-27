@@ -8,19 +8,25 @@ studentEmail: ksan0037@student.monash.edu
 phone: 0432 399 251
 linkedin: https://www.linkedin.com/in/krishiraj-santchurn
 credentials:
-  - BEng (Hons) Civil Engineering — Monash
+  - Bachelor of Civil Engineering (Honours) — Monash
   - CAPM® · Certified Associate in Project Management (PMI)
   - Advanced Diploma in Accounting and Business (ACCA)
   - CPCWHS1001 · White Card
 ---
 
-I'm a civil engineering (Honours) student at Monash who works at an intersection few engineers occupy: core structural and infrastructure engineering, genuine digital fluency — BIM, Civil 3D, digital twins and coding — and a formal commercial grounding from an accounting background.
+I'm a final-year Civil Engineering (Honours) student at Monash University, minoring in Environmental Engineering and graduating in July 2027.
 
-That mix lets me see a project end to end: the structural design, the documentation and site delivery, the digital tools that make the work faster and clearer, and the cost and delivery picture around it. I've applied it across structural consulting, government infrastructure and large-scale (~1000-unit) construction — alongside founding and leading student teams.
+My foundation is civil and structural: reinforced-concrete design and AutoCAD documentation at a structural consultancy, site experience on a ~1,000-unit housing development and public infrastructure works in Mauritius, road design in Civil 3D, and a capstone where I lead the structural discipline.
+
+Around that core I bring two things: digital tools (Revit/BIM, Civil 3D, digital-twin research, and software I've built and shipped) and a commercial grounding from ACCA accounting and CAPM project management. Together they help me see how a design gets documented, delivered on site, and paid for.
+
+Outside the technical work, I founded the Monash Mauritian Society, lead the AWS Student Builder Group at Monash, and mentor first-year engineering students.
+
+I'm interested in graduate roles in structural, civil and infrastructure engineering where technical rigour, digital delivery and commercial awareness come together.
 
 ## Credentials
 
-- Bachelor(Hons) Civil Engineering (Monash)
+- Bachelor of Civil Engineering (Honours) (Monash)
 - Minor Environmental Engineering (Monash)
 - Certified Associate in Project Management (PMI)
 - Advanced Diploma in Accounting and Business (ACCA)

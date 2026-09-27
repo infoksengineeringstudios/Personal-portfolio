@@ -105,7 +105,8 @@ function toMedia(kind: ContentKind, urlParts: string[], filename: string): Media
       .replace(/^IMG[-_]?/i, "Photo ")
       .replace(/[-_]+/g, " ")
       .replace(/\s+/g, " ")
-      .trim(),
+      .trim()
+      .replace(/^(\p{Ll})/u, (c) => c.toUpperCase()),
     filename,
     url: mediaUrl(kind, ...urlParts, filename),
     mimeType: getMimeType(filename),
@@ -274,9 +275,7 @@ function loadItem(kind: ContentKind, folderName: string): ContentItem {
     },
   ];
   const usePlaceholder = images.length === 0 && kind === "projects";
-  const finalGalleries: GalleryGroup[] = usePlaceholder
-    ? [{ title: "", images: placeholderImages }]
-    : galleries;
+  const finalGalleries: GalleryGroup[] = usePlaceholder ? [] : galleries;
 
   return {
     slug,
@@ -429,7 +428,7 @@ const CERTIFICATIONS: Certification[] = [
   },
   {
     label: "Monash University",
-    issuer: "BEng (Hons) Civil Engineering",
+    issuer: "Bachelor of Civil Engineering (Honours)",
     monogram: "M",
     file: "monash.png",
   },
