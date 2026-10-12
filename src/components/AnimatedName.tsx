@@ -16,15 +16,19 @@ export function AnimatedName({ text, className }: AnimatedNameProps) {
   }
 
   const words = text.split(" ");
-  let charIndex = 0;
 
   return (
     <h1 className={className} aria-label={text}>
-      {words.map((word, wi) => (
+      {words.map((word, wi) => {
+        // Characters before this word, so the stagger runs continuously
+        // across the whole line without mutating a counter during render.
+        const precedingChars = words
+          .slice(0, wi)
+          .reduce((total, w) => total + w.length, 0);
+        return (
         <span key={`${word}-${wi}`} className="inline-block whitespace-nowrap">
           {word.split("").map((ch, ci) => {
-            const delay = 0.15 + charIndex * 0.035;
-            charIndex += 1;
+            const delay = 0.15 + (precedingChars + ci) * 0.035;
             return (
               <motion.span
                 key={ci}
@@ -43,7 +47,8 @@ export function AnimatedName({ text, className }: AnimatedNameProps) {
           })}
           {wi < words.length - 1 ? <span>&nbsp;</span> : null}
         </span>
-      ))}
+        );
+      })}
     </h1>
   );
 }
