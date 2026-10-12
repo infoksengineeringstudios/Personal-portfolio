@@ -2,7 +2,7 @@
 title: Aboriginal Gathering Place
 discipline: Civil
 role: Structural Engineer
-summary: Fourth-year civil capstone — the structural design of a community gathering place, from a concept comparison (RC vs steel) through to detailed steel design: a Revit model, Autodesk Robot analysis, critical-member checks to AS 4100, and connection details produced in Revit with a custom Revit MCP.
+summary: "Fourth-year civil capstone — the structural design of a community gathering place, from a concept comparison (RC vs steel) through to detailed steel design: a Revit model, Autodesk Robot analysis, critical-member checks to AS 4100, and connection details produced in Revit with a custom Revit MCP."
 period: July 2026 – November 2026
 featured: true
 cover: 1. Concept design/Aerial view.png
