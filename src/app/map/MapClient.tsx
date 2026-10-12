@@ -44,7 +44,7 @@ const MAP_HTML = `<div class="map-viewport" aria-label="Engineering capability m
         <div class="illustration engineer-art" aria-hidden="true"></div>
         <div class="card-heading"><span class="number">01</span><div><h2 id="engineer-title">ENGINEER</h2><p>Structural &amp; Civil</p></div></div>
         <p class="flow">RC • Steel • Analysis → Documentation</p>
-        <div class="evidence"><h3>Key Experience</h3><p><a href="/internships/lux-consult">Lux Consult</a><br><a href="/projects/aboriginal-gathering-place">Aboriginal Gathering Place</a> • <a href="/projects/road-design">Rafflesia Vision Valley</a><br>SpaceGass • AutoCAD</p></div>
+        <div class="evidence"><h3>Key Experience</h3><p><a href="/internships/lux-consult">Lux Consult</a><br><a href="/projects/aboriginal-gathering-place">Aboriginal Gathering Place</a> • <a href="/projects/road-design">Rafflesia Vision Valley</a><br>Autodesk Robot • AutoCAD</p></div>
       </section>
 
       <section class="capability model" aria-labelledby="model-title">

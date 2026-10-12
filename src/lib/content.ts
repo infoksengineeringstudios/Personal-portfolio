@@ -151,7 +151,11 @@ function collectMedia(
     .map((e) => e.name)
     .sort((a, b) => a.localeCompare(b));
 
-  const subGroups: GalleryGroup[] = [];
+  // An optional leading "N. " / "N " on a subfolder name sets explicit gallery
+  // order; it is stripped from the displayed title. Folders without a prefix
+  // keep the previous keyword/alphabetical behaviour.
+  const ORDER_PREFIX = /^(\d+)[.)\-·]?\s+/;
+  const subGroups: Array<GalleryGroup & { order: number }> = [];
   const subImages: MediaFile[] = [];
   for (const sub of subdirs) {
     const subImgs = fs
@@ -161,20 +165,32 @@ function collectMedia(
       .sort((a, b) => a.localeCompare(b))
       .map((filename) => toMedia(kind, [folderName, sub], filename));
     if (subImgs.length > 0) {
-      subGroups.push({ title: sub, images: subImgs });
+      const match = sub.match(ORDER_PREFIX);
+      const order = match ? parseInt(match[1], 10) : Number.POSITIVE_INFINITY;
+      subGroups.push({
+        title: sub.replace(ORDER_PREFIX, ""),
+        images: subImgs,
+        order,
+      });
       subImages.push(...subImgs);
     }
   }
   subGroups.sort(
-    (a, b) => galleryRank(a.title) - galleryRank(b.title) || a.title.localeCompare(b.title),
+    (a, b) =>
+      a.order - b.order ||
+      galleryRank(a.title) - galleryRank(b.title) ||
+      a.title.localeCompare(b.title),
+  );
+  const orderedSubGroups: GalleryGroup[] = subGroups.map(
+    ({ title, images }) => ({ title, images }),
   );
 
   let galleries: GalleryGroup[];
   if (subGroups.length > 0) {
     galleries =
       rootImages.length > 0
-        ? [{ title: "Overview", images: rootImages }, ...subGroups]
-        : subGroups;
+        ? [{ title: "Overview", images: rootImages }, ...orderedSubGroups]
+        : orderedSubGroups;
   } else {
     galleries = rootImages.length > 0 ? [{ title: "", images: rootImages }] : [];
   }
