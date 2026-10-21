@@ -3,7 +3,7 @@ title: ACES
 summary: Committee member supporting events, academic initiatives, and industry engagement for civil engineering students at Monash.
 organization: Monash Association of Civil Engineering Students
 role: Events & Academic Committees
-period: April 2024 – Present
+period: April 2024 – October 2026
 featured: true
 cover: IMG_5672.JPG
 technologies:

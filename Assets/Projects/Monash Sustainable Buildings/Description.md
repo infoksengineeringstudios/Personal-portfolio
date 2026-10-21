@@ -4,7 +4,7 @@ discipline: Design & build
 summary: Design-and-build project delivering a modular meeting space through prototyping, fabrication, and construction. Motorola Grant Winner
 period: August 2024 – June 2025
 featured: true
-cover: 1.png
+cover: Podside.png
 technologies:
   - CAD
   - Laser cutting
