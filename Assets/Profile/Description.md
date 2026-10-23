@@ -11,6 +11,8 @@ credentials:
   - Bachelor of Civil Engineering (Honours) — Monash
   - CAPM® · Certified Associate in Project Management (PMI)
   - Advanced Diploma in Accounting and Business (ACCA)
+  - buildingSMART Professional Certification — Entry (openBIM / IFC)
+  - SEED-AI · Deakin University
   - CPCWHS1001 · White Card
 ---
 
@@ -30,6 +32,8 @@ I'm interested in graduate roles in structural, civil and infrastructure enginee
 - Minor Environmental Engineering (Monash)
 - Certified Associate in Project Management (PMI)
 - Advanced Diploma in Accounting and Business (ACCA)
+- buildingSMART Professional Certification — Entry (openBIM / IFC)
+- SEED-AI — Skills for Education, Employment and Digital AI (Deakin University)
 - CPCWHS1001 · White Card
 
 
