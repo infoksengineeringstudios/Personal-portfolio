@@ -448,6 +448,12 @@ const CERTIFICATIONS: Certification[] = [
     monogram: "M",
     file: "monash.png",
   },
+  {
+    label: "SEED-AI",
+    issuer: "Skills for Education, Employment & Digital AI · Deakin University",
+    monogram: "AI",
+    file: "seed-ai.png",
+  },
 ].map(({ file, ...rest }) => {
   const exists = fs.existsSync(
     path.join(ROOT, "public", "badges", file),
