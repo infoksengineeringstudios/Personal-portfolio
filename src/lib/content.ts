@@ -454,6 +454,12 @@ const CERTIFICATIONS: Certification[] = [
     monogram: "AI",
     file: "seed-ai.png",
   },
+  {
+    label: "buildingSMART",
+    issuer: "Professional Certification — Entry · openBIM / IFC",
+    monogram: "BS",
+    file: "buildingsmart.png",
+  },
 ].map(({ file, ...rest }) => {
   const exists = fs.existsSync(
     path.join(ROOT, "public", "badges", file),
