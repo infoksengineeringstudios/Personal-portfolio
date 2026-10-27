@@ -115,7 +115,7 @@ export function Footer({ name, email }: FooterProps) {
               </text>
             </svg>
             <p className="font-mono text-xs text-subtle">
-              &copy; {year} {name} &middot; Built to tolerance
+              &copy; {year} {name} &middot; All rights reserved
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-4 font-mono text-xs uppercase tracking-[0.08em] text-muted">
